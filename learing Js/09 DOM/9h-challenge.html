@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input class="js-in" placeholder="input here" onkeyup="myfun(event)" />
+    <p class="js-out"></p>
+    <script>
+      function myfun(event) {
+        const text = document.querySelector(".js-in");
+        document.querySelector(".js-out").innerHTML = text.value;
+      }
+    </script>
+  </body>
+</html>

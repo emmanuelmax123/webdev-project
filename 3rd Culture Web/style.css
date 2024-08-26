@@ -1,0 +1,394 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Meera+Inimai&display=swap");
+:root {
+  --main-font: "Meera Inimai", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+nav .cont {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 2.563rem;
+}
+.logo {
+  height: 2.276rem;
+  margin-right: 28.598rem;
+  cursor: pointer;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline;
+  margin-right: 3.188rem;
+}
+
+nav ul li:hover {
+  border-bottom: solid 2px black;
+  padding-bottom: 0.5rem;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.icons {
+  display: flex;
+}
+.profile-img {
+  margin-right: 1.313rem;
+}
+/* nav ends here */
+
+header {
+  height: 90vh;
+  background: url(assets/image\ 5.jpg);
+  background-position: top;
+  background-size: cover;
+  /* text */
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: start;
+}
+
+.txt-cont {
+  /* border: 2px solid black; */
+  margin-bottom: 59px;
+  margin-left: 49px;
+}
+
+.hdr-txt {
+  margin-bottom: 31px;
+}
+.hdr-txt h1 {
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 66px;
+  color: white;
+  height: 109px;
+  width: 494px;
+}
+
+.sec-btn {
+  padding: 10px 15px;
+  font-size: 14px;
+  background: black;
+  color: white;
+  text-decoration: none;
+  transition: all 0.5s ease-out;
+}
+
+.sec-btn:hover {
+  color: black;
+  background: rgb(255, 255, 255);
+}
+
+.pri-btn {
+  padding: 8px 15px;
+  font-size: 14px;
+  border: black solid 2px;
+  background: white;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.pri-btn:hover {
+  background-color: black;
+  color: white;
+}
+/* hdr ends here */
+
+.main-container {
+  margin: 0 49px;
+  padding-top: 30px;
+}
+
+.discover-cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+h4 {
+  font-size: 14px;
+  font-weight: 400;
+}
+h3 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  margin-top: 5px;
+}
+.item-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* .item-card {
+  border: 2px solid black;
+} */
+
+.cont-txtbtn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.item-card .card-img {
+  margin-bottom: 39px;
+}
+.card-text .cost {
+  margin-top: 8px;
+}
+
+.radio {
+  cursor: pointer;
+  display: inline-flex;
+}
+
+.btn {
+  display: none;
+}
+.radio-btn {
+  width: 1rem;
+  height: 1rem;
+  border: solid 2px blue;
+  border-radius: 50%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 2px;
+}
+.radio-btn::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: red;
+  border-radius: 50%;
+
+  transform: scale(0);
+  transition: transform 0.15s;
+}
+
+.btn:checked + .radio-btn::after {
+  transform: scale(1);
+}
+
+/* Discover ends here but still needs some updates */
+.Culture {
+  margin: 0 49px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 449px;
+  margin-top: 126px;
+  margin-bottom: 65px;
+}
+
+.txt-sect {
+  width: 645px;
+}
+.txt-sect p {
+  margin-bottom: 24px;
+}
+.txt-sect h2 {
+  margin-top: 40px;
+  margin-bottom: 18px;
+  font-family: var(--main-font);
+  font-size: 36px;
+}
+/* culture ends here */
+.col-imgcont {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.col-img2 {
+  height: 580px;
+}
+.col-img1 {
+  height: 580px;
+}
+/* collection ends here */
+.abt-container {
+  margin: 0 49px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.inner-cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.story {
+  margin-right: 10px;
+}
+
+h5 {
+  font-weight: bold;
+  font-size: large;
+}
+
+/* about us sect ends here */
+.wear-story {
+  width: 100%;
+  margin-top: 90px;
+}
+.story-txt {
+  margin: 0 299px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.story-txt p {
+  margin-top: 32px;
+  margin-bottom: 20px;
+}
+/* slider starts here */
+.story-show {
+  width: 90%;
+  max-width: 1536px;
+  margin-inline: auto;
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  margin-top: 31px;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+}
+/* animation */
+@keyframes scrollleft {
+  to {
+    left: -490px;
+  }
+}
+@keyframes scrollright {
+  to {
+    right: -490px;
+  }
+}
+
+.slider,
+.slider1 {
+  width: 290px;
+  height: 200px;
+  position: absolute;
+  animation: 40s linear infinite;
+}
+
+.slider img,
+.slider1 img {
+  border-radius: 5px;
+}
+
+.slider {
+  animation-name: scrollleft;
+  left: max(calc(200px * 6), 100%);
+}
+.slider1 {
+  animation-name: scrollright;
+  right: max(calc(200px * 6), calc(100% + 200px));
+}
+
+.sl1 {
+  animation-delay: calc(40s / 6 * (6 - 1) * -1);
+}
+.sl2 {
+  animation-delay: calc(40s / 6 * (6 - 2) * -1);
+}
+.sl3 {
+  animation-delay: calc(40s / 6 * (6 - 3) * -1);
+}
+.sl4 {
+  animation-delay: calc(40s / 6 * (6 - 4) * -1);
+}
+.sl5 {
+  animation-delay: calc(40s / 6 * (6 - 5) * -1);
+}
+.sl6 {
+  animation-delay: calc(40s / 6 * (6 - 6) * -1);
+}
+/* stoty ends here */
+
+footer {
+  margin: 0 49px;
+  margin-top: 100px;
+  margin-bottom: 31px;
+}
+.copy {
+  border-top: 2px solid black;
+  padding-top: 25px;
+}
+/*   border: 2px solid black; */
+
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.more-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 538px;
+}
+.more-info p {
+  margin-bottom: 19px;
+  cursor: pointer;
+}
+.more-info h5 {
+  margin-bottom: 25px;
+}
+.newsletter p.main {
+  margin-top: 7px;
+  margin-bottom: 30px;
+}
+.newsletter label {
+  margin-right: 20px;
+  margin-left: 5px;
+}
+.newsletter img {
+  margin-bottom: 29px;
+}
+.name {
+  padding: 8px 15px;
+  font-size: 14px;
+  border: black solid 2px;
+  background: white;
+  color: rgb(141, 133, 133);
+  width: 273px;
+  margin-top: 22px;
+  margin-bottom: 15px;
+}
+h6 {
+  font-size: 10px;
+  font-weight: 400;
+  width: 273px;
+  margin-bottom: 29px;
+}

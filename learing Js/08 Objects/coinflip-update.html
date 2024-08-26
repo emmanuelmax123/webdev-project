@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <!-- challenge excercise 8i - 8k -->
+  <body>
+    <button onclick="playGame ('heads')">Head</button>
+    <button onclick="playGame('tails')">Tails</button>
+    <button onclick="reset()">Reset</button>
+    <script>
+      function playGame(guess) {
+        const scores = JSON.parse(localStorage.getItem("scores")) || {
+          win: 0,
+          loss: 0,
+        };
+        const randomNumber = Math.random();
+        const result = randomNumber < 0.5 ? "heads" : "tails";
+        console.log(guess === result ? "You win!" : "You lose!");
+        if (guess === result) {
+          scores.win += 1;
+        } else {
+          scores.loss += 1;
+        }
+        console.log(scores);
+        localStorage.setItem("scores", JSON.stringify(scores));
+      }
+      function reset() {
+        localStorage.removeItem("scores");
+        const scores = JSON.parse(localStorage.getItem("scores")) || {
+          win: 0,
+          loss: 0,
+        };
+        console.log(scores);
+        console.log(`${JSON.stringify(scores)} has been reset`);
+      }
+    </script>
+  </body>
+</html>

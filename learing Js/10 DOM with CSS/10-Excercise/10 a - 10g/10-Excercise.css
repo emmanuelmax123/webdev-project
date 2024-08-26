@@ -1,0 +1,36 @@
+.cart {
+  background-color: rgb(255, 216, 20);
+  color: rgb(0, 0, 0);
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border: none;
+}
+.req {
+  background-color: black;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-weight: bold;
+  border: none;
+}
+.Schedule {
+  background-color: rgba(209, 204, 204, 0.797);
+  color: black;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  border: none;
+  margin-bottom: 15px;
+  margin-right: 10px;
+}
+
+.sql {
+  background-color: rgb(255, 216, 20);
+  color: rgb(0, 0, 0);
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border: none;
+}

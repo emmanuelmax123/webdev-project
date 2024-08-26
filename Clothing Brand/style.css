@@ -1,0 +1,308 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Zain:wght@200;300;400;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #239bfe;
+  --txt: "Montserrat", sans-serif;
+}
+/* nav start here */
+nav {
+  /* border: gold solid 2px; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(55, 148, 83);
+  background: black;
+  padding: 1.5rem;
+  font-family: var(--txt);
+  font-weight: 700;
+}
+
+.logo {
+  margin-left: 5rem;
+  /* border: greenyellow dashed 2px; */
+}
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 5rem;
+}
+
+.burger span {
+  border: 2px solid var(--main-color);
+  width: 40px;
+  height: 1px;
+  margin: 2px;
+}
+/* Nav ends here */
+
+/* Header starts here */
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2rem;
+  height: 90vh;
+}
+
+.main-headings {
+  font-family: var(--txt);
+  font-size: 4rem;
+  /* border: black solid 2px; */
+  transform: translateY(-40px);
+  color: #00000097;
+  line-height: 5rem;
+}
+
+.main-headings span {
+  color: black;
+}
+
+.primary-heading {
+  max-width: 500px;
+  font-family: sans-serif;
+  line-height: 25px;
+  margin-bottom: 1rem;
+  color: #716d6d;
+}
+
+.btn-fill {
+  background: var(--main-color);
+  color: white;
+  border: none;
+  margin-right: 10px;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+
+.btn-fill:hover {
+  background-color: white;
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
+}
+
+.btn-outline.active {
+  border: 2px solid var(--main-color);
+  color: var(--main-color);
+  background: transparent;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+
+.btn-outline.active:hover {
+  background-color: var(--main-color);
+  color: white;
+}
+
+.img-container {
+  border-radius: 50%;
+  box-shadow: 4px 7px 5px 2px #bcbaba;
+}
+
+.header-img {
+  border-radius: 100%;
+  background: url(assets/oswaldo-ibanez-1NPUmTaiMeg-unsplash.jpg);
+  background-position: top;
+  background-size: cover;
+  width: 400px;
+  height: 400px;
+}
+/* haeder ends */
+
+/* section one start */
+
+.section-one {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 7rem;
+}
+
+.section-one-img {
+  background: url(assets/gesphotoss-1i9K55ni5Dk-unsplash.jpg);
+  background-position: top;
+  background-size: cover;
+}
+
+/* section one ends here */
+.products {
+  margin-top: 10rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.products .product-heading {
+  font-family: var(--txt);
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.products .product-categories button {
+  margin-right: 20px;
+  margin-bottom: 2rem;
+}
+
+.products .product-item-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  max-width: 60rem;
+}
+
+.products .product-item-container .item {
+  margin: 20px;
+}
+
+.products .product-item-container .item-layer {
+  background: #ebf1f0;
+  padding: 40px;
+  margin-right: 20px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.products .product-item-container .item-layer img {
+  width: 150px;
+  height: 200px;
+}
+
+.products .product-item-container .item-name {
+  font-family: var(--txt);
+  margin-bottom: 10px;
+}
+.products .product-item-container .item-price {
+  font-family: var(--txt);
+  margin-bottom: 10px;
+}
+.products .product-item-container .view-product {
+  font-family: var(--txt);
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px solid black;
+}
+/* product section ends here  */
+
+/* customer review starts */
+
+.customer-reviews {
+  display: flex;
+  margin-top: 7rem;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.customer {
+  text-align: center;
+}
+
+.costumer-heading {
+  font-family: var(--txt);
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 10rem;
+  margin-bottom: 20px;
+}
+
+.customer-reviews .customer-description {
+  font-size: 12px;
+  margin-top: 20px;
+  max-width: 200px;
+  text-align: center;
+  margin: 10px;
+  font-family: var(--txt);
+}
+
+.customer .customer-img .img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background-position: center;
+  background-size: cover;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.customer .img-one {
+  background: url(assets/yogendra-singh-uWs_N5Dlyiw-unsplash.jpg);
+}
+.customer .img-two {
+  background: url(assets/milan-popovic-kOnmHdLJTNI-unsplash.jpg);
+}
+.customer .img-three {
+  background: url(assets/joshua-rondeau-xazIYnxpS2Q-unsplash.jpg);
+}
+/* customer review starts */
+
+/* Footer starts here */
+footer {
+  background: #1f1e1e;
+  margin-top: 7rem;
+  color: white;
+  display: flex;
+  padding: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  font-family: var(--txt);
+}
+
+footer .container .footer-heading {
+  margin-bottom: 3rem;
+  /* border: white solid 2px; */
+}
+
+footer .container .footer-primary-heading {
+  font-weight: normal;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+footer .container {
+  height: 150px;
+}
+/* Footber ends here */
+
+/* Responsiveness begins here */
+@media only screen and (max-width: 900px) {
+  header {
+    height: 50vh;
+    text-align: center;
+  }
+  .section-one {
+    height: 40vh;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .header-img {
+    width: 250px;
+    height: 250px;
+  }
+  .main-headings {
+    font-size: 3rem;
+  }
+  .primary-heading {
+    width: 50ch;
+  }
+}

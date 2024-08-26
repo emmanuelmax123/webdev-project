@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>12 Advance Functions</title>
+  </head>
+  <body>
+    <!-- <button onclick="clicks()" class="fin">start</button> -->
+    <button class="fin">start</button>
+    <div>
+      <button onclick="cart()" class="cart">Add to cart</button>
+      <p class="text"></p>
+    </div>
+
+    <script>
+      // 12 a - 12 e
+
+      // const add = function () {
+      //   console.log(2 + 2);
+      // };
+      // add();
+      // add();
+
+      // function runTwice(fun) {
+      //   fun();
+      //   fun();
+      // }
+
+      // runTwice(function () {
+      //   console.log("12b");
+      // });
+
+      // function clicks() {
+      //   const btn = document.querySelector(".fin");
+      //   btn.innerHTML = "loading...";
+      //   setTimeout(function () {
+      //     btn.innerHTML = "finished";
+      //   }, 1000);
+      // }
+
+      // function cart() {
+      //   const pText = document.querySelector(".text");
+      //   pText.innerHTML = "<p>added</p>";
+      //   setTimeout(function () {
+      //     pText.innerHTML = "";
+      //   }, 2000);
+      // }
+
+      // Part 2
+
+      // 12j - 12l
+
+      // const muliply = (a, b) => {
+      //   return a * b;
+      // };
+      // console.log(muliply(2, 3));
+
+      // const muliply1 = (c, d) => c + d;
+      // console.log(muliply1(2, 3));
+
+      // function countPositive(nums) {
+      //   let pNum = 0;
+      //   nums.forEach((num) => {
+      //     if (num > 0) {
+      //       pNum++;
+      //     }
+      //   });
+      //   return pNum;
+      // }
+
+      // console.log(countPositive([1, -3, 5]));
+      // console.log(countPositive([-2, 3, -5, 7, 10]));
+
+      // 12m - 12o
+
+      // function addNum(array, num) {
+      //   return array.map((nums) => nums + num);
+      // }
+      // console.log(addNum([1, 2, 3], 2));
+
+      // function removeEggs(foods) {
+      //   return foods.filter((food) => food !== "eggs");
+      // }
+      // console.log(removeEggs(["eggs", "beans", "bread", "eggs"]));
+
+      // function removeEggs(foods) {
+      //   let checker = 0;
+      //   return foods.filter((food) => {
+      //     if (checker < 2 && food === "eggs") {
+      //       checker++;
+      //       return false;
+      //     } else {
+      //       return true;
+      //     }
+      //   });
+      // }
+      // console.log(removeEggs(["eggs", "beans", "eggs", "bread", "eggs"]));
+
+      // 12p
+
+      // function clicks() {
+      //   const btn = document.querySelector(".fin");
+      //   btn.innerHTML = "loading...";
+      //   setTimeout(() => {
+      //     btn.innerHTML = "finished";
+      //   }, 1000);
+      // }
+
+      // function cart() {
+      //   const pText = document.querySelector(".text");
+      //   pText.innerHTML = "<p>added</p>";
+      //   setTimeout(() => {
+      //     pText.innerHTML = "";
+      //   }, 2000);
+      // }
+
+      // let clock;
+      // function cart() {
+      //   const pText = document.querySelector(".text");
+      //   pText.innerHTML = "added";
+      //   clearTimeout(clock);
+      //   // we clear the previous timeout
+      //   clock = setTimeout(() => {
+      //     pText.innerHTML = "";
+      //     clicked = true;
+      //     time = true;
+      //   }, 2000);
+      // }
+
+      // function message() {
+      //   setInterval(() => {
+      //     if (document.title === "12 challenge") {
+      //       document.title === "(2) New Messages";
+      //     } else {
+      //       document.title === "12 challenge";
+      //     }
+      //   }, 1000);
+      // }
+
+      // let Messages = 1;
+      // setInterval(() => {
+      //   if (Messages > 0) {
+      //     document.title === `${Messages} New Messages`;
+      //     console.log(`${Messages} New Messages`);
+      //   } else if (Messages === 0) {
+      //     document.title === "12 challenge";
+      //   } else {
+      //     document.title === "12 challenge";
+      //   }
+      // }, 1000);
+
+      // 12q
+      const btn = document.querySelector(".fin");
+      btn.addEventListener("click", () => {
+        btn.innerHTML = "loading...";
+        setTimeout(() => {
+          btn.innerHTML = "finished";
+        }, 1000);
+      });
+    </script>
+  </body>
+</html>

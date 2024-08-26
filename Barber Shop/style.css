@@ -1,0 +1,335 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+:root {
+  --txt: "Lato", sans-serif;
+  --color: #37132d;
+}
+/* Resets */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* nav start here */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  color: black;
+  padding: 1rem;
+}
+ul li {
+  list-style: none;
+  display: inline;
+}
+
+ul li a {
+  text-decoration: none;
+  color: black;
+  margin: 10px;
+  font-family: var(--txt);
+  font-weight: 700;
+}
+/* nav ends here */
+
+/* Section one starts here */
+.content_container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+.header_content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+}
+
+.header_heading {
+  font-size: 5rem;
+  font-family: var(--txt);
+}
+
+.header_sub-headings {
+  width: 70%;
+  color: rgb(82, 82, 82);
+  margin: 20px 0;
+}
+
+.btn-container {
+  margin-top: 30px;
+}
+
+.main-btn {
+  background: var(--color);
+  border: white solid 2px;
+  color: white;
+  font-size: 1rem;
+  font-family: var(--txt);
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.header_img-container {
+  width: 30%;
+  height: 50vh;
+  position: relative;
+}
+
+.header_img {
+  width: 200px;
+  height: 300px;
+}
+
+.img-one {
+  position: absolute;
+  left: 10rem;
+}
+.img-two {
+  position: absolute;
+  left: 3rem;
+  top: 10rem;
+}
+/* Section one ends here */
+
+/* Experience starts here */
+
+.experience {
+  height: 90vh;
+  margin-left: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.experience-img {
+  background: url(assets/eugene-chystiakov-taZSJ6xmt48-unsplash.jpg);
+  background-size: cover;
+  width: 300px;
+  height: 350px;
+  margin-left: 50px;
+}
+
+.gray-heading {
+  color: gray;
+  font-family: var(--txt);
+}
+
+/* Experience ends here */
+
+/* Social media starts here */
+.social-media {
+  margin: 5rem;
+}
+
+.sm-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 10rem;
+}
+
+.follow {
+  padding: 10px 20px;
+  background: var(--color);
+  color: white;
+  font-family: var(--txt);
+  font-weight: 700;
+  margin-right: 3rem;
+  text-align: center;
+}
+/* SOcial media end here */
+
+/* Hero starts here */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-container {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-img-container {
+  background: url(assets/albert-dera-ILip77SbmOE-unsplash.jpg);
+  background-size: cover;
+  background-position: top;
+  width: 300px;
+  height: 400px;
+}
+
+.hero_sub-headings {
+  width: 400px;
+}
+.hero_content {
+  margin-left: 6rem;
+}
+/* Hero ends here */
+
+/* services starts here */
+
+.services {
+  margin-top: 10rem;
+}
+
+.services_g-heading {
+  margin-left: 5rem;
+}
+
+.services-heading {
+  margin-left: 5rem;
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 300px;
+  height: 430px;
+  position: relative;
+  box-shadow: 1px 1px 1px 1px rgb(223, 223, 223);
+  margin: 20px;
+}
+
+.card-img {
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: top;
+}
+
+.img-one {
+  background-image: url(assets/allef-vinicius-IvQeAVeJULw-unsplash.jpg);
+}
+.img-two {
+  background-image: url(assets/christoffer-engstrom-1ouGlRChSbY-unsplash.jpg);
+}
+.img-three {
+  background-image: url(assets/john-arano-CCTCHXEsan8-unsplash.jpg);
+}
+
+.card-content {
+  transform: translateY(200px);
+  text-align: center;
+  margin: 10px;
+}
+.card-title {
+  font-family: sans-serif;
+  font-weight: normal;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.card-info {
+  font-family: var(--txt);
+  text-align: center;
+  color: rgb(109, 109, 109);
+  margin: 30px 40px;
+}
+
+/* services ends here */
+
+/* Footer starts here */
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  background: var(--color);
+  color: white;
+  height: 40vh;
+  margin-top: 7rem;
+}
+
+.footer_card-tiile {
+  font-family: sans-serif;
+}
+
+.footer_card-info {
+  font-family: var(--txt);
+  line-height: 2rem;
+}
+/* Footer ends here */
+
+/* Responsiveness */
+@media only screen and (max-width: 600px) {
+  .header_content {
+    align-items: center;
+    text-align: center;
+    width: 70%;
+  }
+  .header_img-container {
+    display: none;
+  }
+  nav {
+    margin-left: 5px;
+  }
+
+  .experience {
+    height: 100vh;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .experience_sub-heading {
+    margin: 0 auto;
+  }
+  .experience-img {
+    border: black solid 2px;
+    margin: 0 auto;
+  }
+  .btn-container {
+    margin-top: 30px;
+    margin-bottom: 3.5rem;
+  }
+  .sm-container {
+    margin-top: 5rem;
+  }
+  .follow {
+    width: 60%;
+    margin-bottom: 2rem;
+    margin-left: 7.5rem;
+    margin-right: 7.5rem;
+  }
+  .sm-container .list-item {
+    margin-bottom: 1rem;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+  }
+  .header_heading {
+    font-size: 3rem;
+  }
+  .footer {
+    margin-top: 6rem;
+    height: 30vh;
+  }
+}

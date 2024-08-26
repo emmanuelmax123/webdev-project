@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>9g</title>
+    <!-- i had to fix the value to be two deciaml points -->
+  </head>
+  <body>
+    <h1>Amazon Shipping Calculator</h1>
+    <p>Order under $40 will have additinoal cost of $10 for shipping</p>
+    <p>Oders Over $70 will have no additional cost for shipping</p>
+
+    <input
+      placeholder="Cost of Order"
+      class="js-Costinput"
+      onkeydown="costClickDown(event)"
+    />
+    <button onclick="calTotal();">calculate</button>
+    <p class="js-total-cost"></p>
+    <script>
+      function costClickDown(event) {
+        if (event.key === "Enter") {
+          calTotal();
+        }
+      }
+
+      function calTotal() {
+        const inputElemet = document.querySelector(".js-Costinput");
+        let cost = Number(inputElemet.value) * 100;
+
+        if (cost < 4000) {
+          cost += 1000;
+        }
+
+        document.querySelector(".js-total-cost").innerHTML = `$${cost / 100}`;
+      }
+    </script>
+  </body>
+</html>

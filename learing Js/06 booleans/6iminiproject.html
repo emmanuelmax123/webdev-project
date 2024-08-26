@@ -1,0 +1,61 @@
+<!-- adding the fuctionality that stop us from removing a cart at 0 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test 05</title>
+  </head>
+  <body>
+    <button
+      onclick="cartQuantity;
+    console.log(`cart has ${cartQuantity}`);"
+    >
+      Show Cart Qunatity
+    </button>
+
+    <button
+      onclick="cartQuantity+=4;
+    console.log(cartQuantity);"
+    >
+      +4
+    </button>
+    <button
+      onclick="cartQuantity+=5;
+    console.log(cartQuantity);"
+    >
+      +5
+    </button>
+
+    <button
+      onclick="
+      if (cartQuantity === 0){
+        alert('Not enough item')
+        console.log(`you have ${cartQuantity} item left`);
+      }else {
+      cartQuantity--;
+      console.log(cartQuantity);
+      }
+    "
+    >
+      -1
+    </button>
+
+    <button
+      onclick="if (cartQuantity === 0){
+        alert('Not enough item')
+        console.log(`you have ${cartQuantity} item left`);
+      }else {
+      cartQuantity-= 2;
+      console.log(cartQuantity);
+      }
+    "
+    >
+      -2
+    </button>
+
+    <script>
+      cartQuantity = 0;
+    </script>
+  </body>
+</html>

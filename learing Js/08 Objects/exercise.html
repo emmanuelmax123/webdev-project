@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object exercises</title>
+  </head>
+  <body>
+    <script>
+      // 8a -8d
+      const product = { name: "basketball", price: 2095 };
+      product.price += 500;
+      console.log(product.price);
+      product["delivery-time"] = "3-days";
+      console.log(product);
+
+      const product1 = {
+        name: "ball",
+        price: 100,
+      };
+      const product2 = {
+        name: "basball",
+        price: 190,
+      };
+      function comparePrice(product1, product2) {
+        if (product1.price > product2.price) {
+          console.log(`${product2.name} is cheaper`);
+        } else if (product2.price > product1.price) {
+          console.log(`${product1.name} is cheaper`);
+        }
+      }
+      comparePrice(product1, product2);
+
+      // 8e - 8h
+      const product3 = {
+        name: "ball",
+        price: 100,
+      };
+
+      const product4 = product3;
+
+      function isSameProduct(product3, product4) {
+        if (product3 === product4) {
+          console.log("They are the same product".toLowerCase().repeat(2));
+        } else if (product3.name === product4.name) {
+          console.log("They have the same names");
+        } else if (product3.price === product4.price) {
+          console.log("They are the same price".toLowerCase());
+        }
+      }
+      isSameProduct(product3, product4);
+    </script>
+  </body>
+</html>

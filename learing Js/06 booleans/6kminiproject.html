@@ -1,0 +1,62 @@
+<!-- here i will work on upadting the cart project i prevously did, allowing it to accept max quantity -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart Quantity</title>
+  </head>
+  <body>
+    <h1>Cart Quantity</h1>
+    <button onclick="console.log(`cart Qunatity: ${cartQuantity}`);">
+      Show Quantity
+    </button>
+    <button
+      onclick="
+    if (cartQuantity +1 > maxQuantity){
+      alert('cart if full')
+    } else{
+      cartQuantity ++;
+      console.log(`cart Qunatity: ${cartQuantity}`);}"
+    >
+      Add to Cart
+    </button>
+
+    <button
+      onclick="
+    if (cartQuantity +2 > maxQuantity){
+      alert('cart if full')
+    } else{
+      cartQuantity += 2;
+      console.log(`cart Qunatity: ${cartQuantity}`);}
+    "
+    >
+      +2
+    </button>
+    <button
+      onclick="
+    if (cartQuantity +3 > maxQuantity){
+      alert('cart if full')
+    } else{
+      cartQuantity += 3;
+      console.log(`cart Qunatity: ${cartQuantity}`);}
+    "
+    >
+      +3
+    </button>
+    <button
+      onclick="
+    cartQuantity = 0;
+    console.log(`cart was cleared`);
+    console.log(`cart Qunatity: ${cartQuantity}`);
+    "
+    >
+      Reset Cart
+    </button>
+
+    <script>
+      let cartQuantity = 0;
+      let maxQuantity = 10;
+    </script>
+  </body>
+</html>

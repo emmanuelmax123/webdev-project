@@ -1,0 +1,38 @@
+<!-- css update -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RockPaperScissors</title>
+    <link rel="stylesheet" href="RPS.css" />
+  </head>
+  <body>
+    <p class="title">Rock Paper Scissors</p>
+    <button class="move-btn js-Rock">
+      <img src="assets/rock-emoji.png" class="move-icon" />
+    </button>
+
+    <!-- paper button -->
+    <button class="move-btn js-paper">
+      <img src="assets/paper-emoji.png" class="move-icon" />
+    </button>
+
+    <!-- scissors button -->
+    <button class="move-btn js-scissors">
+      <img src="assets/scissors-emoji.png" class="move-icon" />
+    </button>
+
+    <p class="js-result result"></p>
+
+    <p class="js-moves"></p>
+
+    <p class="js-score score"></p>
+
+    <button class="btn js-resetbtn">Reset</button>
+
+    <button class="btn js-autoplay" onclick="autoPlay();">Auto Play</button>
+    <p class="request"></p>
+    <script src="RPSupdate.js"></script>
+  </body>
+</html>

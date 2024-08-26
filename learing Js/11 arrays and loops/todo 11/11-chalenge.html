@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>11 chalenge excercise pt 1</title>
+  </head>
+  <body>
+    <script>
+      // 11l - 11n
+
+      // function minMax(nums) {
+      //   const result = {
+      //     min: null,
+      //     max: null,
+      //   };
+
+      //   for (i = 0; i < nums.length; i++) {
+      //     const value = nums[i];
+      //     if (result.min === null || value < result.min) {
+      //       result.min = value;
+      //     }
+      //     if (result.max === null || value > result.max) {
+      //       result.max = value;
+      //     }
+      //   }
+      //   return result;
+      // }
+      // console.log(minMax([3, 6, 9]));
+
+      function countWords(words) {
+        const result = {};
+        for (i = 0; i < words.length; i++) {
+          const word = words[i];
+          if (!result[word]) {
+            result[word] = 1;
+          } else {
+            result[word]++;
+          }
+        }
+        return result;
+      }
+      // console.log(countWords(["apple"]));
+      console.log(countWords(["apple", "apple", "apple", "cherry", "pie"]));
+    </script>
+  </body>
+</html>

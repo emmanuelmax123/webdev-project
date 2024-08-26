@@ -1,0 +1,26 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+}
+
+.heading {
+  font-size: 10rem;
+  font-weight: 900;
+  background-image: url(https://images.pexels.com/photos/3778852/pexels-photo-3778852.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-size: cover;
+  background-clip: text;
+  background-position: top;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  color: transparent;
+}

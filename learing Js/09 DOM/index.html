@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <button>hello</button>
+    <button class="js-btn">sec btn</button>
+    <script>
+      console.log(document.querySelector("button"));
+      document.querySelector("button").innerHTML = "hi";
+      const buttonElem = document.querySelector(".js-btn");
+      console.log(buttonElem);
+    </script>
+  </body>
+</html>

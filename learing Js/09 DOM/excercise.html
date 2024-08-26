@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise</title>
+  </head>
+  <body>
+    <!-- 9a - 9c -->
+    <button class="js-btn">9a</button>
+    <button class="js-btn2">9b</button>
+    <button
+      onclick="document.querySelector('.res').innerHTML = 'You chose heads'"
+    >
+      Heads
+    </button>
+
+    <button
+      onclick="document.querySelector('.res').innerHTML = 'You chose tails'"
+    >
+      Tails
+    </button>
+
+    <p class="res"></p>
+    <!-- 9d - 9f -->
+
+    <input placeholder="Name" class="js-name-input" onkeydown="myFun(event)" />
+    <button onclick=" masteControl()">Submit</button>
+    <p class="Result"></p>
+
+    <script>
+      document.querySelector(".js-btn2").innerHTML = "9b done";
+      console.log(document.querySelector(".js-btn"));
+
+      function myFun(event) {
+        if (event.key === "Enter") {
+          masteControl();
+        }
+      }
+
+      function masteControl() {
+        const inputElem = document.querySelector(".js-name-input");
+        document.querySelector(
+          ".Result"
+        ).innerHTML = `your name is ${inputElem.value}`;
+      }
+    </script>
+  </body>
+</html>

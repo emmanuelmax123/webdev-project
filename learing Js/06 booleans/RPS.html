@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RockPaperScissors</title>
+  </head>
+  <body>
+    <p>Rock Paper Scissors</p>
+    <button
+      onclick="
+    const botNum = Math.random(); 
+    let botMove = '';
+    if(botNum >= 0 && botNum <1/3){
+      botMove = ('Rock')
+    }
+    else if(botNum >= 1/3 && botNum <2/3){
+      botMove = ('Paper')
+    }
+    else if(botNum >= 2/3 && botNum <1){
+      botMove = ('Scissors')
+    }
+
+    let result= ''
+    if (botMove === 'Rock'){
+      result = 'Tie'
+    }
+    else if(botMove === 'paper'){
+      result = 'You Lose'
+    }
+    else if(botMove === 'Scissors'){
+      result = 'You Win'
+    }
+    alert(`You picked Rock, The bot picked ${botMove}. ${result}`)
+    "
+    >
+      Rock
+    </button>
+    <!-- new button -->
+    <button
+      onclick="
+    const botNum1 = Math.random(); 
+    let botMove1 = '';
+    if(botNum1 >= 0 && botNum1 <1/3){
+      botMove1 = ('Rock')
+    }
+    else if(botNum1 >= 1/3 && botNum1 <2/3){
+      botMove1 = ('paper')
+    }
+    else if(botNum1 >= 2/3 && botNum1 <1){
+      botMove1 = ('Scissors')
+    }
+
+    let result1 = '';
+    if (botMove1 === 'Rock'){
+      result1 = 'You Win'
+    }
+    else if(botMove1 === 'paper'){
+      result1 = 'Tie'
+    }
+    else if(botMove1 === 'Scissors'){
+      result1 = 'You Lose'
+    }
+    alert(`You picked paper, The bot picked ${botMove1}. ${result1}`)
+    "
+    >
+      paper
+    </button>
+    <!-- new button -->
+    <button
+      onclick="
+    const botNum11 = Math.random(); 
+    let botMove11 = '';
+    if(botNum11 >= 0 && botNum11 <1/3){
+      botMove11 = 'Rock';
+    }
+    else if(botNum11 >= 1/3 && botNum11 <2/3){
+      botMove11 = 'paper';
+    }
+    else if(botNum11 >= 2/3 && botNum11 <1){
+      botMove11 = 'Scissors';
+    }
+    console.log(botNum11)
+    let result11 = '';
+    if (botMove11 === 'Rock'){
+      result11 = 'You lose';
+    }
+    else if(botMove11 == 'paper'){
+      result11 = 'You win';
+    }
+    else if(botMove11 === 'Scissors'){
+      result11 = 'Tie';
+    }
+    console.log(result11)
+    console.log(botMove11)
+    alert(`You picked Scissors, The bot picked ${botMove11}. ${result11}`)
+    "
+    >
+      Scissors
+    </button>
+    <script></script>
+  </body>
+</html>

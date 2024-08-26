@@ -1,0 +1,43 @@
+body {
+  background-color: black;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.math-btn {
+  font-size: 2rem;
+  background-color: orange;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  border: none;
+}
+
+.btn {
+  font-size: 2rem;
+  background-color: rgb(69, 66, 66);
+  border: none;
+  color: white;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+}
+.clr {
+  font-size: 20px;
+  background-color: rgb(69, 66, 66);
+  border: none;
+  color: white;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+}
+
+.res {
+  color: white;
+  font-size: 2rem;
+  font-size: bold;
+}
