@@ -44,7 +44,7 @@ products.forEach((product) => {
 
           <div class="product-spacer"></div>
 
-          <div class="added-to-cart">
+          <div class="added-to-cart js-added-to-cart-${product.id}">
             <img src="images/icons/checkmark.png" />
             Added
           </div>
@@ -57,10 +57,14 @@ products.forEach((product) => {
 
 document.querySelector(".js-productGrid").innerHTML = productsHTML;
 
+// this is used for timeout it is declared outside of the click, we use an object to save mutiple timeout
+const addMessageTimeouts = {};
+
 document.querySelectorAll(".js-add-to-cart").forEach((button) => {
   button.addEventListener("click", () => {
-    console.log(button.dataset);
-    const productId = button.dataset.productId;
+    // console.log(button.dataset);
+    // const productId = button.dataset.productId; a simplified version below
+    const { productId } = button.dataset;
 
     let matchingItem;
     cart.forEach((item) => {
@@ -76,8 +80,10 @@ document.querySelectorAll(".js-add-to-cart").forEach((button) => {
       matchingItem.quantity += quantity;
     } else {
       cart.push({
-        productId: productId,
-        quantity: quantity,
+        // productId: productId,
+        // quantity: quantity,
+        productId,
+        quantity,
       });
     }
 
@@ -88,5 +94,20 @@ document.querySelectorAll(".js-add-to-cart").forEach((button) => {
     });
 
     document.querySelector(".js-cart-quantity").innerHTML = cartQuantity;
+    const addVisible = document.querySelector(`.js-added-to-cart-${productId}`);
+    addVisible.classList.add("add-visible");
+
+    const previousTimeout = addMessageTimeouts[productId];
+    // this check if productId has an id timeout in the addMessageTimeout and pushes the old timeout into the previousTimeout
+    if (previousTimeout) {
+      clearTimeout(previousTimeout);
+    }
+
+    const timeoutId = setTimeout(() => {
+      addVisible.classList.remove("add-visible");
+    }, 2000);
+
+    addMessageTimeouts[productId] = timeoutId;
+    // we add an id of the recent timeout into the addMessageTimeout
   });
 });

@@ -469,4 +469,15 @@ const products = [
     priceCents: 2400,
     keywords: ["sweaters", "hoodies", "apparel", "mens"],
   },
+  {
+    id: "id1",
+    image: "images/products/backpack.jpg",
+    name: "Men's backpack",
+    rating: {
+      stars: 5,
+      count: 317,
+    },
+    priceCents: 2400,
+    keywords: ["sweaters", "hoodies", "apparel", "mens"],
+  },
 ];
