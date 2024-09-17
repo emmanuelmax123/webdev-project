@@ -13,14 +13,9 @@ import {
   deliveryOptions,
   getDelievryOption,
 } from "../../data/deliveryoptions.js";
-hello();
+import renderPaymentSummary from "./paymentsummary.js";
 
 export default function renderOrderSummary() {
-  const today = dayjs();
-  const deliveryDate = today.add(7, "days");
-
-  console.log(deliveryDate.format("dddd, MMMM D"));
-
   let cartsummaryHTML = "";
 
   cart.forEach((cartItem) => {
@@ -119,13 +114,13 @@ export default function renderOrderSummary() {
   document.querySelectorAll(".js-delete-link").forEach((link) => {
     link.addEventListener("click", () => {
       const productId = link.dataset.productId;
-
-      console.log(productId);
+      // update the data
       removeFromCart(productId);
       const container = document.querySelector(
         `.js-cart-item-container-${productId}`
       );
       container.remove();
+      renderPaymentSummary();
       updateCartQuantity();
     });
   });
@@ -191,7 +186,7 @@ export default function renderOrderSummary() {
       // uses shorthand property....see 14h:50.30
       updateDelievryOption(productId, deliveryOptionId);
       renderOrderSummary();
-      console.log("hi");
+      renderPaymentSummary();
     });
   });
 }
