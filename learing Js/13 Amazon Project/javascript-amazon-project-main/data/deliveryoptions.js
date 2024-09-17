@@ -15,4 +15,12 @@ export const deliveryOptions = [
     priceCents: 999,
   },
 ];
-export default deliveryOptions;
+
+export function getDelievryOption(deliveryOptionId) {
+  let deliveryOption;
+  deliveryOptions.forEach((option) => {
+    if (option.id === deliveryOptionId) deliveryOption = option;
+  });
+  return deliveryOption || deliveryOptions[0];
+  // this menas it should retuen a delivery option or let the delivery option be 0
+}

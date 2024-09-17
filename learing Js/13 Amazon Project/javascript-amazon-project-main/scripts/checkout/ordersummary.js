@@ -4,12 +4,15 @@ import {
   calculateCartQuantity,
   updateQuantity,
 } from "../../data/cart.js";
-import { products } from "../../data/products.js";
+import { products, getProduct } from "../../data/products.js";
 import formatCurrency from "../utils/money.js";
 import { hello } from "https://unpkg.com/supersimpledev@1.0.1/hello.esm.js";
 import dayjs from "https://unpkg.com/dayjs@1.11.10/esm/index.js";
-import deliveryOptions from "../../data/deliveryoptions.js";
 import { updateDelievryOption } from "../../data/cart.js";
+import {
+  deliveryOptions,
+  getDelievryOption,
+} from "../../data/deliveryoptions.js";
 hello();
 
 export default function renderOrderSummary() {
@@ -22,19 +25,10 @@ export default function renderOrderSummary() {
 
   cart.forEach((cartItem) => {
     const productId = cartItem.productId;
-    let matchingproduct;
-
-    products.forEach((product) => {
-      if (product.id === productId) {
-        matchingproduct = product;
-      }
-    });
+    const matchingproduct = getProduct(productId);
 
     const deliveryOptionId = cartItem.deliveryOptionId;
-    let deliveryOption;
-    deliveryOptions.forEach((option) => {
-      if (option.id === deliveryOptionId) deliveryOption = option;
-    });
+    const deliveryOption = getDelievryOption(deliveryOptionId);
     const today = dayjs();
     const deliveryDate = today.add(deliveryOption.deliveryDays, "days");
     const dateString = deliveryDate.format("dddd, MMMM D");
@@ -197,6 +191,7 @@ export default function renderOrderSummary() {
       // uses shorthand property....see 14h:50.30
       updateDelievryOption(productId, deliveryOptionId);
       renderOrderSummary();
+      console.log("hi");
     });
   });
 }
