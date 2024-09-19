@@ -1,0 +1,23 @@
+<!-- 16 e -->
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script type="module">
+      import dayjs from "https://unpkg.com/dayjs@1.11.10/esm/index.js";
+
+      // const date = dayjs();
+      // const day = date.format("dddd");
+      // console.log(day);
+
+      function isWeekend(day) {
+        const time = day.format("dddd");
+        return time === "Saturday" || time === "Sunday";
+      }
+
+      let day = dayjs().add(2, "day");
+      console.log(day.format("dddd, MMMM D"));
+      console.log(isWeekend(day));
+    </script>
+  </body>
+</html>
