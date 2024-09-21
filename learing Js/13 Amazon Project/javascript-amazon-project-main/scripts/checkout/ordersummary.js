@@ -12,8 +12,10 @@ import { updateDelievryOption } from "../../data/cart.js";
 import {
   deliveryOptions,
   getDelievryOption,
+  calculateDeliveryDate,
 } from "../../data/deliveryoptions.js";
 import renderPaymentSummary from "./paymentsummary.js";
+import { rendercheckoutHeader } from "./checkoutHeader.js";
 
 export default function renderOrderSummary() {
   let cartsummaryHTML = "";
@@ -24,9 +26,7 @@ export default function renderOrderSummary() {
 
     const deliveryOptionId = cartItem.deliveryOptionId;
     const deliveryOption = getDelievryOption(deliveryOptionId);
-    const today = dayjs();
-    const deliveryDate = today.add(deliveryOption.deliveryDays, "days");
-    const dateString = deliveryDate.format("dddd, MMMM D");
+    const dateString = calculateDeliveryDate(deliveryOption);
 
     cartsummaryHTML += `<div class="cart-item-container js-cart-item-container-${
       matchingproduct.id
@@ -82,9 +82,7 @@ export default function renderOrderSummary() {
   function deliveryOptionsHtml(matchingproduct, cartItem) {
     let html = "";
     deliveryOptions.forEach((deliveryOption) => {
-      const today = dayjs();
-      const deliveryDate = today.add(deliveryOption.deliveryDays, "days");
-      const dateString = deliveryDate.format("dddd, MMMM D");
+      const dateString = calculateDeliveryDate(deliveryOption);
 
       const priceString =
         deliveryOption.priceCents === 0
@@ -116,6 +114,7 @@ export default function renderOrderSummary() {
       const productId = link.dataset.productId;
       // update the data
       removeFromCart(productId);
+      rendercheckoutHeader();
       renderOrderSummary();
       renderPaymentSummary();
       updateCartQuantity();
