@@ -4,10 +4,9 @@ import {
   calculateCartQuantity,
   updateQuantity,
 } from "../../data/cart.js";
-import { products, getProduct } from "../../data/products.js";
+import { getProduct } from "../../data/products.js";
 import formatCurrency from "../utils/money.js";
 
-import dayjs from "https://unpkg.com/dayjs@1.11.10/esm/index.js";
 import { updateDelievryOption } from "../../data/cart.js";
 import {
   deliveryOptions,
@@ -28,17 +27,15 @@ export default function renderOrderSummary() {
     const deliveryOption = getDelievryOption(deliveryOptionId);
     const dateString = calculateDeliveryDate(deliveryOption);
 
-    cartsummaryHTML += `<div class="cart-item-container js-cart-item-container-${
+    cartsummaryHTML += `<div class="cart-item-container js-cart-item-container js-cart-item-container-${
       matchingproduct.id
     }">
               <div class="delivery-date">Delivery date: ${dateString}</div>
-
               <div class="cart-item-details-grid">
                 <img
                   class="product-image"
                   src="${matchingproduct.image}"
                 />
-
                 <div class="cart-item-details">
                   <div class="product-name">
                     ${matchingproduct.name}
