@@ -1,5 +1,9 @@
 import renderOrderSummary from "../../scripts/checkout/ordersummary.js";
-import { loadFromStorage, cart } from "../../data/cart.js";
+import {
+  loadFromStorage,
+  cart,
+  updateDelievryOption,
+} from "../../data/cart.js";
 
 describe("test suite: renderOrderSummary", () => {
   const p1 = "e43638ce-6aa0-4b85-b27f-e1d07eb678c6";
@@ -46,6 +50,13 @@ describe("test suite: renderOrderSummary", () => {
     expect(
       document.querySelector(`.js-product-quantity-${p2}`).innerText
     ).toContain("Quantity: 1");
+
+    expect(document.querySelector(`.js-product-name-${p1}`).innerText).toEqual(
+      "Black and Gray Athletic Cotton Socks - 6 Pairs"
+    );
+    expect(document.querySelector(`.js-product-name-${p2}`).innerText).toEqual(
+      "Adults Plain Cotton T-Shirt - 2 Pack"
+    );
   });
 
   it("removes a product", () => {
@@ -59,7 +70,55 @@ describe("test suite: renderOrderSummary", () => {
     expect(document.querySelector(`.js-cart-item-container-${p2}`)).not.toEqual(
       null
     );
+    expect(document.querySelector(`.js-product-name-${p2}`).innerText).toEqual(
+      "Adults Plain Cotton T-Shirt - 2 Pack"
+    );
     expect(cart.length).toEqual(1);
     expect(cart[0].productId).toEqual(p2);
+  });
+
+  it("checks if the price matches", () => {
+    expect(document.querySelector(`.js-product-price-${p1}`).innerText).toEqual(
+      `$10.90`
+    );
+
+    expect(document.querySelector(`.js-product-price-${p2}`).innerText).toEqual(
+      `$7.99`
+    );
+  });
+
+  it("updates the delivery options", () => {
+    document.querySelector(`.js-delivery-option-${p1}-3`).click();
+    expect(
+      document.querySelector(`.js-delivery-option-input-${p1}-3`).checked
+    ).toEqual(true);
+
+    expect(cart.length).toEqual(2);
+    expect(cart[0].productId).toEqual(p1);
+    expect(cart[0].deliveryOptionId).toEqual("3");
+    expect(
+      document.querySelector(".js-payment-summary-shipping").innerText
+    ).toEqual("$29.79");
+    expect(
+      document.querySelector(".js-payment-summary-total").innerText
+    ).toEqual("$49.25");
+  });
+
+  it("do nothing if you input an delivery option", () => {
+    // Error: <spyOn> : getItem has already been spied upon
+    spyOn(localStorage, "getItem").and.callFake(() => {
+      return JSON.stringify([
+        {
+          productId: "15b6fc6f-327a-4ec4-896f-486349e85a3d",
+          quantity: 2,
+          deliveryOptionId: "1",
+        },
+      ]);
+    });
+    loadFromStorage();
+    updateDelievryOption("15b6fc6f-327a-4ec4-896f-486349e85a3d", "5");
+    expect(cart.length).toEqual(1);
+    expect(cart.quantity).toEqual(2);
+    expect(localStorage.setItem).toHaveBeenCalledTimes(0);
   });
 });

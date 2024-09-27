@@ -18,4 +18,8 @@ describe("for edge case", () => {
   it("rounds down", () => {
     expect(formatCurrency(2000.4)).toEqual("20.00");
   });
+
+  it("works with negatve number", () => {
+    expect(formatCurrency(-500)).toEqual("-5.00");
+  });
 });

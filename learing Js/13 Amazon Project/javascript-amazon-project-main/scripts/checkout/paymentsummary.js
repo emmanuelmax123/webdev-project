@@ -19,7 +19,7 @@ export default function renderPaymentSummary() {
   <div class="payment-summary-title">Order Summary</div>
     <div class="payment-summary-row">
       <div>Items (${calculateCartQuantity()}):</div>
-      <div class="payment-summary-money">$${formatCurrency(
+      <div class="payment-summary-money js-payment-summary-shipping">$${formatCurrency(
         productPriceCents
       )}</div>
     </div>
@@ -45,7 +45,9 @@ export default function renderPaymentSummary() {
 
     <div class="payment-summary-row total-row">
       <div>Order total:</div>
-      <div class="payment-summary-money">$${formatCurrency(totalCent)}</div>
+      <div class="payment-summary-money js-payment-summary-total">$${formatCurrency(
+        totalCent
+      )}</div>
     </div>
 
     <button class="place-order-button button-primary">
