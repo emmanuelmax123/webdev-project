@@ -166,7 +166,7 @@ describe("testSuite: update Delvery Option", () => {
     spyOn(localStorage, "getItem").and.callFake(() => {
       return JSON.stringify([
         {
-          productId: "p1",
+          productId: p1,
           quantity: 1,
           deliveryOptionId: "1",
         },
