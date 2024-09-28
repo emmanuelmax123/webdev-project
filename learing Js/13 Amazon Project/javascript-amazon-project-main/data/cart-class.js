@@ -2,15 +2,15 @@ import { validDeliveryOption } from "./deliveryoptions.js";
 
 class Cart {
   cartItems;
-  localStorageKey;
+  #localStorageKey;
 
   constructor(localStorageKey) {
-    this.localStorageKey = localStorageKey;
-    this.loadFromStorage();
+    this.#localStorageKey = localStorageKey;
+    this.#loadFromStorage();
   }
 
-  loadFromStorage() {
-    this.cartItems = JSON.parse(localStorage.getItem(this.localStorageKey));
+  #loadFromStorage() {
+    this.cartItems = JSON.parse(localStorage.getItem(this.#localStorageKey));
     // this changes the "cart" from string back to an array (this is due to it beign saved in local storage)
 
     if (!this.cartItems) {
@@ -31,7 +31,7 @@ class Cart {
 
   saveToStorage() {
     // converts cart into a sting so it can be saved in local storage
-    localStorage.setItem(this.localStorageKey, JSON.stringify(this.cartItems));
+    localStorage.setItem(this.#localStorageKey, JSON.stringify(this.cartItems));
   }
 
   addTocart(productId) {
