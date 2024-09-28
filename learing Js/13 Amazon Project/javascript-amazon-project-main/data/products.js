@@ -53,6 +53,12 @@ class Clothing extends Product {
   }
 }
 
+// Date is a default class in js
+
+// const date = new Date();
+// console.log(date);
+// console.log(date.toLocaleTimeString());
+
 // turning the products object into individual classes
 export const products = [
   {
