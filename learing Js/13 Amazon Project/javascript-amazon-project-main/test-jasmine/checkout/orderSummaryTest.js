@@ -4,10 +4,18 @@ import {
   cart,
   updateDelievryOption,
 } from "../../data/cart.js";
+import { loadProducts } from "../../data/products.js";
 
 describe("test suite: renderOrderSummary", () => {
   const p1 = "e43638ce-6aa0-4b85-b27f-e1d07eb678c6";
   const p2 = "83d4ca15-0f35-48f5-b7a3-1ea210004f2e";
+
+  // testing with backend, we wait to recieve the info and call done to get to the rest of the code
+  beforeAll((done) => {
+    loadProducts(() => {
+      done();
+    });
+  });
   // before each code runs do this
   beforeEach(() => {
     spyOn(localStorage, "setItem");
@@ -33,6 +41,7 @@ describe("test suite: renderOrderSummary", () => {
       ]);
     });
     loadFromStorage();
+
     renderOrderSummary();
   });
   // after each code has run clear the html
