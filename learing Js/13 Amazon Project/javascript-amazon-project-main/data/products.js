@@ -78,7 +78,30 @@ export class Appliances extends Product {
 // console.log(date);
 // console.log(date.toLocaleTimeString());
 
+export let products = [];
+
+export function loadProducts(fun) {
+  const xhr = new XMLHttpRequest();
+  // 'load' is the event we are listening for()
+  xhr.addEventListener("load", () => {
+    products = JSON.parse(xhr.response).map((productDetails) => {
+      if (productDetails.type === "clothing") {
+        return new Clothing(productDetails);
+      }
+      if (productDetails.type === "appliances") {
+        return new Appliances(productDetails);
+      }
+      return new Product(productDetails);
+    });
+    console.log("products are loaded");
+    fun();
+  });
+  xhr.open("GET", "https://supersimplebackend.dev/products");
+  xhr.send();
+}
+
 // turning the products object into individual classes
+/*
 export const products = [
   {
     id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
@@ -571,3 +594,4 @@ export const products = [
   }
   return new Product(productDetails);
 });
+*/
