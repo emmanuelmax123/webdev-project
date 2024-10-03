@@ -9,18 +9,30 @@ import { loadCart } from "../data/cart.js";
 
 // code using prommise because we're getting data from the backend
 
+async function loadPage() {
+  await loadProductsFetch();
+
+  const value = await new Promise((resolve) => {
+    loadCart(() => {
+      resolve("value 3");
+    });
+  });
+  rendercheckoutHeader();
+  renderOrderSummary();
+  renderPaymentSummary();
+}
+loadPage();
+
+/*
 Promise.all([
   loadProductsFetch(),
-  new Promise((resolve) => {
-    loadCart(() => {
-      resolve();
-    });
-  }),
+  
 ]).then(() => {
   rendercheckoutHeader();
   renderOrderSummary();
   renderPaymentSummary();
 });
+*/
 
 // new Promise((resolve) => {
 //   loadProducts(() => {
