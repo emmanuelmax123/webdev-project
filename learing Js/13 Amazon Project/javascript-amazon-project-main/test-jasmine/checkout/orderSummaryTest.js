@@ -4,7 +4,7 @@ import {
   cart,
   updateDelievryOption,
 } from "../../data/cart.js";
-import { loadProducts } from "../../data/products.js";
+import { loadProducts, loadProductsFetch } from "../../data/products.js";
 
 describe("test suite: renderOrderSummary", () => {
   const p1 = "e43638ce-6aa0-4b85-b27f-e1d07eb678c6";
@@ -12,7 +12,7 @@ describe("test suite: renderOrderSummary", () => {
 
   // testing with backend, we wait to recieve the info and call done to get to the rest of the code
   beforeAll((done) => {
-    loadProducts(() => {
+    loadProductsFetch().then(() => {
       done();
     });
   });
