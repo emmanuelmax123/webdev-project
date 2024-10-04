@@ -10,13 +10,19 @@ import { loadCart } from "../data/cart.js";
 // code using prommise because we're getting data from the backend
 
 async function loadPage() {
-  await loadProductsFetch();
+  try {
+    await loadProductsFetch();
 
-  const value = await new Promise((resolve) => {
-    loadCart(() => {
-      resolve("value 3");
+    const value = await new Promise((resolve) => {
+      loadCart(() => {
+        resolve("value 3");
+      });
     });
-  });
+  } catch (error) {
+    console.log("unexpected error. try again later.");
+    console.log(error);
+  }
+
   rendercheckoutHeader();
   renderOrderSummary();
   renderPaymentSummary();
