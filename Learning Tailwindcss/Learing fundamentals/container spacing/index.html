@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        padding: 5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Margin -->
+    <h3>1. Margin</h3>
+    <div class="m-4 bg-yellow-100">tailwindcss</div>
+    <div class="mx-4 bg-yellow-300">Margin X axis</div>
+    <div class="my-4 bg-yellow-500">Margin Y axis</div>
+    <div class="mt-6 bg-yellow-600">Margin top</div>
+    <div class="ml-6 bg-yellow-700">Margin left</div>
+    <div class="mr-4 bg-yellow-800">Margin right</div>
+    <div class="mb-4 bg-yellow-900">Margin bottom</div>
+
+    <!-- arbitrary spacing -->
+    <h1>2. arbitrary spacing</h1>
+    <div class="m-[100px] bg-slate-700">2. Margin all around</div>
+
+    <!-- padding -->
+    <h1>3. padding</h1>
+    <div class="bg-indigo-100 p-[20px]">padding all around</div>
+    <div class="bg-indigo-200 px-[20px]">padding X axis</div>
+    <div class="bg-indigo-300 py-[20px]">padding Yaxis</div>
+    <div class="bg-indigo-400 pt-[20px]">padding Top</div>
+    <div class="bg-indigo-500 pl-[20px]">padding left</div>
+    <div class="bg-indigo-600 pr-[20px]">padding Right</div>
+    <div class="bg-indigo-700 pb-[20px]">padding Bottom</div>
+
+    <!-- space between -->
+    <h3>space between x axis</h3>
+    <div class="flex space-x-4">
+      <div class="p-3 bg-teal-100">01</div>
+      <div class="p-3 bg-teal-200">02</div>
+      <div class="p-3 bg-teal-300">03</div>
+      <div class="p-3 bg-teal-400">04</div>
+      <div class="p-3 bg-teal-500">05</div>
+    </div>
+
+    <h3>space between Y axis</h3>
+    <div class="flex flex-col space-y-[5px]">
+      <div class="p-3 bg-teal-100">01</div>
+      <div class="p-3 bg-teal-200">02</div>
+      <div class="p-3 bg-teal-300">03</div>
+      <div class="p-3 bg-teal-400">04</div>
+      <div class="p-3 bg-teal-500">05</div>
+    </div>
+  </body>
+</html>
