@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+  </head>
+  <body class="p-20">
+    <h1 class="mb-3">Position</h1>
+
+    <div class="relative w-1/2 h-40 bg-green-200">
+      <p>relative</p>
+      <div class="absolute bottom-0 right-0 bg-teal-500 p-4">
+        <p>absolute</p>
+      </div>
+    </div>
+
+    <div class="relative w-1/2 h-40 bg-green-200 mt-5">
+      <p>relative</p>
+      <div class="absolute left-0 top-0 bg-teal-500 p-4">
+        <p>absolute</p>
+      </div>
+    </div>
+
+    <div class="relative w-1/2 h-40 bg-green-200 mt-5">
+      <p>relative</p>
+      <div class="absolute bottom-0 bg-teal-500 p-4">
+        <p>absolute</p>
+      </div>
+    </div>
+
+    <!-- display properties -->
+    <h1 class="mb-3">display</h1>
+    <div class="bg-indigo-100 p-10 mb-10 wi[600px]">
+      <span class="inline">1. This is display inline</span>
+      <span class="inline-block bg-indigo-500"
+        >2. This is display inline block, it will not extend behond its
+        parent.</span
+      >
+      <span class="block bg-purple-300"
+        >3. this is display block and it will move to its own new line</span
+      >
+      <span class="hidden">4. this will not display</span>
+    </div>
+  </body>
+</html>
