@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+  </head>
+  <body class="p-10">
+    <!-- No Transition -->
+    <div class="my-3">No Transition</div>
+    <button class="p-5 text-white bg-black hover:bg-white hover:text-black">
+      click me
+    </button>
+    <!-- Transition -->
+    <div class="my-3">With Transition</div>
+    <button
+      class="p-5 text-white bg-black transition hover:bg-white duration-300 ease-in-out delay-150 hover:text-black"
+    >
+      with transition
+    </button>
+
+    <!-- Transform -->
+    <div class="my-3">Transformation</div>
+    <button
+      class="p-5 text-white bg-blue-500 transition ease-in-out delay-150 duration-1000 hover:-translate-y-1 hover:scale-110 hover:bg-black"
+    >
+      Transformation
+    </button>
+
+    <!-- Animation -->
+    <div class="flex justify-center">
+      <div class="p-20 ml-20 mt-20 w-20 bg-teal-200 animate-spin">spin</div>
+      <div class="p-20 ml-20 mt-20 w-20 bg-teal-200 animate-ping">ping</div>
+      <div class="p-20 ml-20 mt-20 w-20 bg-teal-200 animate-pulse">pulse</div>
+      <div class="p-20 ml-20 mt-20 w-20 bg-teal-200 animate-bounce">bounce</div>
+    </div>
+  </body>
+</html>
