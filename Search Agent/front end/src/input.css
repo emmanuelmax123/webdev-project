@@ -4,9 +4,34 @@
 
 @layer components {
   .btn {
-    @apply rounded-full border-black;
+    @apply rounded-full border-black py-1 px-2 border-2 hover:cursor-pointer flex justify-around items-center  hover:bg-[#659fa3] hover:text-white hover:border-white;
   }
   .search {
     @apply rounded-2xl border-black;
+  }
+  .num {
+    @apply text-[144px] text-black;
+  }
+}
+
+@layer base {
+  h1 {
+    @apply text-[56px] font-bold font-[Raleway];
+  }
+  h2 {
+    @apply text-[48px] font-medium font-[inter];
+  }
+  h3 {
+    @apply text-[32px] font-normal font-[inter] mb-[30px];
+  }
+  h4 {
+    @apply font-medium font-[inter] mb-[2px];
+  }
+
+  img {
+    @apply rounded-xl;
+  }
+  html {
+    scroll-behavior: smooth;
   }
 }

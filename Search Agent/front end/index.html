@@ -4,40 +4,263 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    />
     <title>Search Agent</title>
   </head>
-  <body class="px-10">
+  <body class="px-[84px]">
     <!-- nav starts -->
-    <nav class="flex justify-between pt-5">
+    <nav class="sticky top-0 bg-white z-50 flex justify-between pt-5 mb-[44px]">
       <img src="assets/logo.svg" />
-
       <ul class="flex justify-center items-center space-x-10">
-        <li>
-          <a href="" class="pb-3 hover:border-b-2 hover:border-black">Home</a>
+        <li class="relative group">
+          <a href="index.html" class="pb-2">Home</a>
+          <div
+            class="absolute left-0 right-0 mx-auto mt-2 h-1 bg-[#659fa3] rounded-full opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          ></div>
         </li>
-        <li>
-          <a href="" class="pb-3 hover:border-b-2 hover:border-black"
-            >How it works</a
-          >
+        <li class="relative group">
+          <a href="#howitwork" class="pb-2">How it works</a>
+          <div
+            class="absolute left-0 right-0 mx-auto mt-2 h-1 bg-[#659fa3] rounded-full opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          ></div>
         </li>
-        <li>
-          <a href="" class="pb-3 hover:border-b-2 hover:border-black"
-            >About Us</a
-          >
+        <li class="relative group">
+          <a href="#about" class="pb-2">About Us</a>
+          <div
+            class="absolute left-0 right-0 mx-auto mt-2 h-1 bg-[#659fa3] rounded-full opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          ></div>
         </li>
-        <li>
-          <a href="" class="pb-3 hover:border-b-2 hover:border-black"
-            >Contact Us</a
-          >
+        <li class="relative group">
+          <a href="#contact" class="pb-2">Contact</a>
+          <div
+            class="absolute left-0 right-0 mx-auto mt-2 h-1 bg-[#659fa3] rounded-full opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          ></div>
         </li>
       </ul>
     </nav>
-    <!-- Header starts here -->
-    <header class="text-3xl underline">
-      <div>
+
+    <!-- Header starts -->
+    <header class="flex justify-between items-center" id="header">
+      <div class="flex flex-col items-start w-3/5">
         <!-- starts step up text for button -->
+        <h1>
+          Seach Agent - Find <br />
+          Jobs in Your Prefered <br />Language
+        </h1>
+        <p class="mt-6 mb-5">
+          Find jobs abroad in your preferred language, no matter where you're
+          from or going.
+        </p>
+        <div class="relative group rounded-full">
+          <a href="serach.html" class="btn">
+            <span>Start Search</span>
+            <img
+              src="assets/Search arrow.svg"
+              class="ml-2 opacity-100 group-hover:opacity-0"
+            />
+            <img
+              src="assets/light-arrow.svg"
+              alt="hover arrow"
+              class="ml-24 absolute opacity-0 group-hover:opacity-100"
+            />
+          </a>
+        </div>
       </div>
-      <img src="" />
+      <div class="w-2/5 h-[540px]">
+        <img src="assets/hero1.jpg" class="w-full h-full object-cover" />
+      </div>
     </header>
+
+    <!-- How it works starts -->
+    <section
+      class="flex justify-between mt-32 scroll-mt-[160px]"
+      id="howitwork"
+    >
+      <div class="flex flex-col items-start w-1/2">
+        <h1>
+          Simplifying Your <br />
+          Global Job Search <br />in 4 easy steps
+        </h1>
+        <p class="mb-5">
+          Search Agent simplifies your international job search in four easy
+          steps.
+        </p>
+        <div class="relative group rounded-full">
+          <a href="serach.html" class="btn">
+            <span>Start Search</span>
+            <img
+              src="assets/Search arrow.svg"
+              class="ml-2 opacity-100 group-hover:opacity-0"
+            />
+            <img
+              src="assets/light-arrow.svg"
+              alt="hover arrow"
+              class="ml-24 absolute opacity-0 group-hover:opacity-100"
+            />
+          </a>
+        </div>
+      </div>
+
+      <div class="w-1/2 grid grid-rows-2 grid-cols-2">
+        <div class="flex justify-start items-center">
+          <div class="num relative">1</div>
+          <p class="text-[24px] absolute mt-10 pl-20">
+            Select Your Preferred <br />Country and Job Title
+          </p>
+        </div>
+        <div class="flex justify-start items-center">
+          <div class="num relative">2</div>
+          <p class="text-[24px] absolute mt-10 pl-20">
+            Choose Your <br />Preferred Language
+          </p>
+        </div>
+        <div class="flex justify-start items-center">
+          <div class="num relative">3</div>
+          <p class="text-[24px] absolute mt-10 pl-20">
+            View Relevant <br />Job Listings
+          </p>
+        </div>
+        <div class="flex justify-start items-center">
+          <div class="num relative">4</div>
+          <p class="text-[24px] absolute mt-10 pl-20">
+            Apply for <br />
+            the Role
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Search Agent starts-->
+    <section class="mt-[100px] scroll-mt-[110px]" id="about">
+      <h2 class="mb-[54px]">About Serach Agent</h2>
+      <div class="flex justify-between items-center">
+        <div class="w-[557px]">
+          <h3>Our mission</h3>
+          <p>
+            At Search Agent, our mission is to break down language barriers for
+            international job seekers. We’re here to help people who want to
+            work abroad but face the challenge of searching for jobs in a
+            language they’re not yet fluent in.
+          </p>
+        </div>
+        <div class="w-[680px] h-[245px]">
+          <img src="assets/mission.jpg" class="w-full h-full object-cover" />
+        </div>
+      </div>
+
+      <div class="flex justify-between items-center mt-[60px]">
+        <div class="w-[557px] h-[245px]">
+          <img src="assets/who.jpg" class="w-full h-full object-cover" />
+        </div>
+        <div class="w-[680px]">
+          <h3>Who we are</h3>
+          <p>
+            Search Agent was created to address a specific problem faced by many
+            expats and internationals: navigating job markets in foreign
+            languages. Our platform enables users to filter job listings by both
+            country and language, ensuring they only see opportunities they can
+            comfortably apply for.
+          </p>
+        </div>
+      </div>
+      <!-- completeing what we do section -->
+      <div class="flex justify-between items-center mt-[100px]">
+        <div class="w-1/2">
+          <h3>What we do</h3>
+          <p class="w-[557px]">
+            We uses innovative web scraping technology to collect job listings
+            from job seeking platforms and organizes them in a way that fits
+            your needs. We provide you with:
+          </p>
+        </div>
+
+        <div class="w-1/2">
+          <div>
+            <img src="assets/language.svg" />
+            <h3 class="mt-[15px]">Search by language</h3>
+            <p>
+              Find jobs that match your qualifications and are presented in the
+              language you are comfortable with. We support 5 languages:
+              English, French, Spanish,Hindu and Dutch.
+            </p>
+          </div>
+          <div class="mt-[60px]">
+            <img src="assets/globe.svg" />
+            <h3 class="mt-[15px]">For global job seekers</h3>
+            <p>
+              Whether you are still learning a country's language or need to
+              transition into the workforce immediately, Search Agent helps you
+              find jobs while you build your language skills.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact starts -->
+    <section
+      class="mt-32 flex justify-between items-center scroll-mt-[110px]"
+      id="contact"
+    >
+      <div class="flex flex-col items-start w-1/2">
+        <h2>Ready to Explore?</h2>
+        <p class="w-[557px] mb-5">
+          Whether you're an expat, international student, or global job seeker,
+          Search Agent is here to support your career journey. Let us help you
+          find opportunities abroad that match both your skills and language
+          preferences.
+        </p>
+        <div class="relative group rounded-full">
+          <a href="serach.html" class="btn">
+            <span>Start Search</span>
+            <img
+              src="assets/Search arrow.svg"
+              class="ml-2 opacity-100 group-hover:opacity-0"
+            />
+            <img
+              src="assets/light-arrow.svg"
+              alt="hover arrow"
+              class="ml-24 absolute opacity-0 group-hover:opacity-100"
+            />
+          </a>
+        </div>
+      </div>
+
+      <div class="flex flex-col items-start w-1/2">
+        <h2>Keep up to date</h2>
+        <input
+          type="text"
+          placeholder="Your Email"
+          class="mt-5 mb-5 w-[431px] py-2 px-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
+        />
+
+        <div class="relative group rounded-full">
+          <button class="btn">
+            <p class="ml-2">Subscribe</p>
+            <img
+              src="assets/Search arrow.svg"
+              class="ml-2 opacity-100 group-hover:opacity-0"
+            />
+            <img
+              src="assets/light-arrow.svg"
+              alt="hover arrow"
+              class="ml-20 absolute opacity-0 group-hover:opacity-100"
+            />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer starts -->
+    <footer class="mt-[260px] mb-[50px]">
+      <p>
+        © 2024 Search Agent. All rights reserved. <br />
+        Unauthorized duplication or publication of any materials from this site
+        is expressly prohibited.
+      </p>
+    </footer>
   </body>
 </html>

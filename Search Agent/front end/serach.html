@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    />
+
+    <title>Search Jobs</title>
+  </head>
+  <body class="px-[84px] bg-[#f8f8f8]">
+    <!-- nav starts -->
+    <nav class="flex justify-between pt-5 mb-[44px]">
+      <img src="assets/logo.svg" />
+      <ul class="flex justify-center items-center space-x-10">
+        <li class="relative group">
+          <a href="index.html" class="pb-2">Home</a>
+          <div
+            class="absolute left-0 right-0 mx-auto mt-2 h-1 bg-[#659fa3] rounded-full opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          ></div>
+        </li>
+        <li class="relative group">
+          <a href="index.html#howitwork" class="pb-2">How it works</a>
+          <div
+            class="absolute left-0 right-0 mx-auto mt-2 h-1 bg-[#659fa3] rounded-full opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          ></div>
+        </li>
+        <li class="relative group">
+          <a href="index.html#about" class="pb-2">About Us</a>
+          <div
+            class="absolute left-0 right-0 mx-auto mt-2 h-1 bg-[#659fa3] rounded-full opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          ></div>
+        </li>
+        <li class="relative group">
+          <a href="index.html#contact" class="pb-2">Contact Us</a>
+          <div
+            class="absolute left-0 right-0 mx-auto mt-2 h-1 bg-[#659fa3] rounded-full opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          ></div>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- serach starts -->
+    <div class="flex justify-center items-center gap-2 mb-6">
+      <form action="" class="relative items-center justify-center flex">
+        <input
+          type="text"
+          id="searchRole"
+          placeholder="Developer"
+          class="js-search-ph rounded-l-lg w-[500px] h-[70px] py-2 px-7 border bg-transparent border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#25666A] focus:border-transparent"
+        />
+        <img
+          src="assets/dismiss.svg"
+          class="h-6 absolute right-2 dismissRole hidden cursor-pointer"
+        />
+      </form>
+
+      <!-- i need to align the hover to the text  -->
+      <form action="" class="relative flex justify-center items-center">
+        <input
+          type="text"
+          id="searchLocation"
+          placeholder="Location"
+          class="js-location-ph bg-blue w-[200px] h-[70px] rounded-r-lg py-2 px-10 border bg-transparent border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#25666A] focus:border-transparent"
+        />
+        <img src="assets/location_on.svg" alt="" class="absolute left-2" />
+        <img
+          src="assets/dismiss.svg"
+          class="h-6 absolute right-2 dismissLocation hidden cursor-pointer"
+        />
+      </form>
+
+      <button
+        class="w-[50px] h-[50px] rounded-lg py-2 px-10 bg-[#25666A] text-[#f8f8f8] items-center justify-center flex"
+        onclick="sendDetails()"
+      >
+        Enter
+      </button>
+    </div>
+
+    <!-- search/save starts -->
+    <div
+      class="flex justify-center items-center gap-[119px] border-b-2 border-gray-100 p-1 mb-[10px]"
+    >
+      <div class="relative group">
+        <a href="serach.html">Search</a>
+        <div
+          class="rounded-full w-[41px] h-[4px] ml-[2px] mt-[2px] absolute bg-[#222222]"
+        ></div>
+      </div>
+
+      <div class="relative group items-center">
+        <p onclick="saveJobs()" class="cursor-pointer">Save</p>
+        <div
+          class="rounded-full w-[24px] h-[4px] ml-[4px] mt-[2px] absolute bg-[#222222] opacity-0 group-hover:opacity-100"
+        ></div>
+      </div>
+    </div>
+
+    <!-- job options -->
+    <div
+      class="jobOptions flex justify-center items-center select-none space-x-4"
+    >
+      <div id="dropdown1" class="flex justify-between items-center h-24">
+        <button
+          onclick="toggleDropdown('dropdown1') "
+          class="inline-flex justify-center items-center rounded-lg bg-[#ededed] px-3 py-2 text-sm font-semibold text-[#222222] shadow-sm ring-1 ring-inset ring-gray-300"
+        >
+          <span class="m-2">Language</span>
+          <svg
+            class="-mr-1 h-5 w-5 text-[#222222]"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            aria-hidden="true"
+            data-slot="icon"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+
+          <div id="Xaxisdropdown" class="rounded inline-flex ml-6 hidden">
+            <div
+              class="cursor-pointer p-2 mr-4 bg-[#f8f8f8] hover:bg-[#9BCCCF] rounded-md text-[#222222]"
+              data-value="English"
+              onclick="selectOption(this, 'Language')"
+            >
+              English
+            </div>
+
+            <div
+              class="cursor-pointer p-2 mr-4 bg-[#f8f8f8] hover:bg-[#9BCCCF] rounded-md text-[#222222]"
+              data-value="Hindi"
+              onclick="selectOption(this, 'Language')"
+            >
+              Hindi
+            </div>
+            <div
+              class="cursor-pointer p-2 mr-4 bg-[#f8f8f8] hover:bg-[#9BCCCF] rounded-md text-[#222222]"
+              data-value="Spanish"
+              onclick="selectOption(this, 'Language')"
+            >
+              Spanish
+            </div>
+            <div
+              class="cursor-pointer p-2 mr-4 bg-[#f8f8f8] hover:bg-[#9BCCCF] rounded-md text-[#222222]"
+              data-value="French"
+              onclick="selectOption(this, 'Language')"
+            >
+              French
+            </div>
+          </div>
+        </button>
+      </div>
+
+      <div id="dropdown2" class="flex justify-between items-center h-24">
+        <button
+          onclick="toggleDropdown('dropdown2') "
+          class="inline-flex justify-center items-center rounded-lg bg-[#ededed] px-3 py-2 text-sm font-semibold text-[#222222] ring-1 ring-inset ring-gray-300"
+        >
+          <span class="m-2">Salary Range</span>
+          <svg
+            class="-mr-1 h-5 w-5 text-[#222222]"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            aria-hidden="true"
+            data-slot="icon"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+
+          <div id="Xaxisdropdown" class="rounded inline-flex ml-6 hidden">
+            <div
+              class="cursor-pointer p-2 mr-4 bg-[#f8f8f8] hover:bg-[#9BCCCF] rounded-md"
+              data-value="1800"
+              onclick="selectOption(this, 'Salary Range')"
+            >
+              1800+/-
+            </div>
+            <div
+              class="cursor-pointer p-2 mr-4 bg-[#f8f8f8] hover:bg-[#9BCCCF] rounded-md"
+              data-value="2300"
+              onclick="selectOption(this, 'Salary Range')"
+            >
+              2300+/-
+            </div>
+            <div
+              class="cursor-pointer p-2 mr-4 bg-[#f8f8f8] hover:bg-[#9BCCCF] rounded-md"
+              data-value="3500"
+              onclick="selectOption(this, 'Salary Range')"
+            >
+              3500+/-
+            </div>
+            <div
+              class="cursor-pointer p-2 mr-4 bg-[#f8f8f8] hover:bg-[#9BCCCF] rounded-md"
+              data-value="5000"
+              onclick="selectOption(this, 'Salary Range')"
+            >
+              5000+
+            </div>
+          </div>
+        </button>
+      </div>
+
+      <div id="dropdown3" class="flex justify-between items-center h-24">
+        <button
+          onclick="toggleDropdown('dropdown3') "
+          class="inline-flex justify-center items-center rounded-lg bg-[#ededed] px-3 py-2 text-sm font-semibold text-[#222222] ring-1 ring-inset ring-gray-300"
+        >
+          <span class="m-2">Experience</span>
+          <svg
+            class="-mr-1 h-5 w-5 text-[#222222]"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            aria-hidden="true"
+            data-slot="icon"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+
+          <div id="Xaxisdropdown" class="rounded inline-flex ml-6 hidden">
+            <div
+              class="cursor-pointer p-2 mr-4 bg-[#f8f8f8] hover:bg-[#9BCCCF] rounded-md"
+              data-value="Entry"
+              onclick="selectOption(this, 'Experience')"
+            >
+              Entry
+            </div>
+            <div
+              class="cursor-pointer p-2 mr-4 bg-[#f8f8f8] hover:bg-[#9BCCCF] rounded-md"
+              data-value="Mid"
+              onclick="selectOption(this, 'Experience')"
+            >
+              Mid
+            </div>
+            <div
+              class="cursor-pointer p-2 mr-4 bg-[#f8f8f8] hover:bg-[#9BCCCF] rounded-md"
+              data-value="Senior"
+              onclick="selectOption(this, 'Experience')"
+            >
+              Senior
+            </div>
+          </div>
+        </button>
+      </div>
+
+      <div id="dropdown4" class="flex justify-between items-center h-24">
+        <button
+          onclick="toggleDropdown('dropdown4') "
+          class="inline-flex justify-center items-center rounded-lg bg-[#ededed] px-3 py-2 text-sm font-semibold text-[#222222] ring-1 ring-inset ring-gray-300"
+        >
+          <span class="m-2">Job type</span>
+          <svg
+            class="-mr-1 h-5 w-5 text-[#222222]"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            aria-hidden="true"
+            data-slot="icon"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+
+          <div id="Xaxisdropdown" class="rounded inline-flex ml-6 hidden">
+            <div
+              class="cursor-pointer p-2 mr-4 bg-[#f8f8f8] hover:bg-[#9BCCCF] rounded-md"
+              data-value="Fulltime"
+              onclick="selectOption(this, 'job hours')"
+            >
+              Full time
+            </div>
+            <div
+              class="cursor-pointer p-2 mr-4 bg-[#f8f8f8] hover:bg-[#9BCCCF] rounded-md"
+              data-value="Partime"
+              onclick="selectOption(this, 'job hours')"
+            >
+              Part time
+            </div>
+            <div
+              class="cursor-pointer p-2 mr-4 bg-[#f8f8f8] hover:bg-[#9BCCCF] rounded-md"
+              data-value="Contract"
+              onclick="selectOption(this, 'job hours')"
+            >
+              Contract
+            </div>
+            <div
+              class="cursor-pointer p-2 mr-4 bg-[#f8f8f8] hover:bg-[#9BCCCF] rounded-md"
+              data-value="Intership"
+              onclick="selectOption(this, 'job hours')"
+            >
+              Intership
+            </div>
+          </div>
+        </button>
+      </div>
+    </div>
+
+    <!-- jobs Availabe -->
+    <div class="flex justify-between js-content">
+      <!-- job listing starts -->
+      <div class="js-jobs-container pt-[48px]"></div>
+
+      <!-- the detail description starts -->
+      <div class="js-sidebar">
+        <div class="js-job-card-container sticky top-0 pt-[48px]"></div>
+      </div>
+    </div>
+
+    <script src="data/data.js"></script>
+  </body>
+</html>

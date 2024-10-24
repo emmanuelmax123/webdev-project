@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sticky and Scrollable Divs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100">
+    <div class="flex p-4 space-x-4">
+      <!-- Sticky Div -->
+      <div
+        class="w-1/4 h-screen sticky top-0 bg-white shadow-md p-4 overflow-hidden"
+      >
+        <div class="h-96 overflow-y-scroll">
+          <p class="mb-2 font-bold">Sticky Div with Inner Scrollbar</p>
+          <p class="mb-2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+          <p class="mb-2">Vivamus lacinia odio vitae vestibulum.</p>
+          <p class="mb-2">
+            Sed turpis massa, scelerisque vitae tortor ac, auctor cursus.
+          </p>
+          <p class="mb-2">Nunc accumsan ligula at erat tincidunt.</p>
+          <p class="mb-2">Curabitur id libero nec metus dignissim pretium.</p>
+          <p class="mb-2">
+            Suspendisse potenti. Nulla at velit ut nisi tincidunt.
+          </p>
+          <p class="mb-2">
+            In hac habitasse platea dictumst. Vivamus suscipit.
+          </p>
+          <p class="mb-2">
+            Morbi tristique, libero at pulvinar blandit, arcu sapien.
+          </p>
+          <p class="mb-2">Ut luctus massa eget libero bibendum tincidunt.</p>
+        </div>
+      </div>
+
+      <!-- Scrollable Div -->
+      <div class="w-3/4 bg-white shadow-md p-4 overflow-y-scroll h-screen">
+        <div class="space-y-4">
+          <div class="bg-blue-100 p-4 rounded shadow">Item 1</div>
+          <div class="bg-blue-100 p-4 rounded shadow">Item 2</div>
+          <div class="bg-blue-100 p-4 rounded shadow">Item 3</div>
+          <div class="bg-blue-100 p-4 rounded shadow">Item 4</div>
+          <div class="bg-blue-100 p-4 rounded shadow">Item 5</div>
+          <div class="bg-blue-100 p-4 rounded shadow">Item 6</div>
+          <div class="bg-blue-100 p-4 rounded shadow">Item 7</div>
+          <div class="bg-blue-100 p-4 rounded shadow">Item 8</div>
+          <div class="bg-blue-100 p-4 rounded shadow">Item 9</div>
+          <div class="bg-blue-100 p-4 rounded shadow">Item 10</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
