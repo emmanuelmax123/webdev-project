@@ -253,18 +253,102 @@
             <div class="mb-2">
               <h4>Search Agent</h4>
               <a href="" target="_blank" rel="noopener noreferrer"
-                ><h6>https://www.Searchagent.com</h6></a
+                ><h6>https://www.Search-agent.com</h6></a
               >
             </div>
           </div>
-          <a class="line-clamp-2" href="">
-            <h5>
+          <div class="line-clamp-2 open-btn cursor-pointer">
+            <h5 class="">
               Finding a job as an expat can be challenging, especially when
               you're still learning the local language. That's why I decided to
               build Search Agent—a web scraping platform that filters job
               listings based on your preferred language.
             </h5>
-          </a>
+          </div>
+          <!-- dialog starts here -->
+          <dialog
+            class="w-[1000px] p-5 flex-col border-[#0a0a0a] border-2 rounded-2xl"
+            id="modal"
+          >
+            <!-- cancel icon starts here -->
+            <div
+              class="h-[36px] close-btn float-end rounded-2xl cursor-pointer"
+            >
+              <img src="../assets/logo/close-fill.svg" alt="" />
+            </div>
+            <!-- hero image + info starts here -->
+            <div class="flex w-full">
+              <img
+                src="../assets/images/searchagent.jpg"
+                alt=""
+                class="w-[498px] h-[256px] mr-5 rounded-xl border-2 border-[#e8e8e8]"
+              />
+              <div class="space-y-5 flex flex-col justify-center">
+                <!-- aboust starts here -->
+                <div class="flex">
+                  <h3 class="w-[5rem] mr-5">About</h3>
+                  <p>
+                    Finding a job as an expat can be challenging, especially
+                    when you're still learning the local language. That's why I
+                    decided to build Search Agent—a web scraping platform that
+                    filters job listings based on your preferred language.
+                  </p>
+                </div>
+
+                <!-- role starts here -->
+                <div class="flex">
+                  <h3 class="w-[63px] mr-5">Role</h3>
+                  <p>Full Stack Developer and Project Manager</p>
+                </div>
+                <!-- tech stack -->
+                <div class="flex items-start">
+                  <h3 class="w-[63px] mr-5">Stack</h3>
+
+                  <img
+                    src="../assets/logo/html5-fill.svg"
+                    alt=""
+                    class="mr-5"
+                  />
+                  <img
+                    src="../assets/logo/tailwind-css-fill.svg"
+                    alt=""
+                    class="mr-5"
+                  />
+                  <img src="../assets/logo/javascript-fill.svg" alt="" />
+                </div>
+              </div>
+            </div>
+
+            <!-- deisgn proces starst here -->
+            <div class="mt-[60px] flex justify-between gap-3">
+              <h3>Design Process</h3>
+              <div
+                class="border-[#0a0a0a] border-2 w-[100px] h-[112px] rounded-lg flex items-center justify-center"
+              >
+                <h1>1</h1>
+              </div>
+              <div
+                class="border-[#0a0a0a] border-2 w-[100px] h-[112px] rounded-lg flex items-center justify-center"
+              >
+                <h1>2</h1>
+              </div>
+              <div
+                class="border-[#0a0a0a] border-2 w-[100px] h-[112px] rounded-lg flex items-center justify-center"
+              >
+                <h1>3</h1>
+              </div>
+              <div
+                class="border-[#0a0a0a] border-2 w-[100px] h-[112px] rounded-lg flex items-center justify-center"
+              >
+                <h1>4</h1>
+              </div>
+              <div
+                class="border-[#0a0a0a] border-2 w-[100px] h-[112px] rounded-lg flex items-center justify-center"
+              >
+                <h1>5</h1>
+              </div>
+            </div>
+          </dialog>
         </div>
 
         <!-- mdt starts -->
@@ -301,4 +385,5 @@
       <section></section>
     </div>
   </body>
+  <script src="script.js"></script>
 </html>
