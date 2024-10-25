@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css" />
+    <title>test</title>
+  </head>
+  <body>
+    <!-- Container for the modal -->
+    <div class="relative">
+      <!-- Hidden checkbox to control the modal visibility -->
+      <input type="checkbox" id="modal-toggle" class="hidden peer" />
+
+      <!-- Trigger button -->
+      <label
+        for="modal-toggle"
+        class="bg-blue-500 text-white px-4 py-2 rounded cursor-pointer"
+      >
+        Open Pop-up
+      </label>
+
+      <!-- Modal overlay -->
+      <div
+        class="fixed inset-0 bg-black bg-opacity-50 hidden peer-checked:block"
+      ></div>
+
+      <!-- Modal box -->
+      <div
+        class="fixed inset-0 flex items-center justify-center hidden peer-checked:flex"
+      >
+        <div class="bg-white rounded-lg shadow-lg p-6 w-80 text-center">
+          <h2 class="text-xl font-semibold mb-4">This is a Pop-up!</h2>
+          <p class="text-gray-600 mb-4">
+            This pop-up is created using only HTML and Tailwind CSS.
+          </p>
+
+          <!-- Close button -->
+          <label
+            for="modal-toggle"
+            class="bg-red-500 text-white px-4 py-2 rounded cursor-pointer"
+          >
+            Close
+          </label>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
