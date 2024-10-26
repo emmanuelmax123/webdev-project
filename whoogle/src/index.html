@@ -80,20 +80,20 @@
           class="flex space-x-[20px] justify-between items-center h-[42px] ml-[28px]"
         >
           <a
-            href=""
-            class="hover:border-2 hover:border-[#0a0a0a] rounded-full bg-[#e8e8e8] px-3 py-2"
+            class="hover:border-2 hover:border-[#0a0a0a] rounded-full bg-[#e8e8e8] px-3 py-2 cursor-pointer"
+            onclick="openPm()"
           >
             Product Manager
           </a>
           <a
-            href=""
-            class="hover:border-2 hover:border-[#0a0a0a] rounded-full bg-[#e8e8e8] px-3 py-2"
+            class="hover:border-2 hover:border-[#0a0a0a] rounded-full bg-[#e8e8e8] px-3 py-2 cursor-pointer"
+            onclick="openIde()"
           >
             Industrial Design Engineer
           </a>
           <a
-            href=""
-            class="hover:border-2 hover:border-[#0a0a0a] rounded-full bg-[#e8e8e8] px-3 py-2"
+            class="hover:border-2 hover:border-[#0a0a0a] rounded-full bg-[#e8e8e8] px-3 py-2 cursor-pointer"
+            onclick="webDev()"
           >
             Web Developer
           </a>
@@ -241,19 +241,21 @@
     <!-- main contrnt starts here -->
     <div class="mx-[174px] mt-[24px] flex">
       <!-- experience post -->
-      <section class="flex flex-col border-r-2 border-r-[#e8e8e8] w-full">
+      <section
+        class="flex flex-col border-r-2 border-r-[#e8e8e8] w-full js-main"
+      >
         <!-- Rediones start -->
         <div class="flex flex-col mb-[36px] w-[490px]">
           <div class="flex">
             <img
-              src="../assets/images/rediones.jpg"
+              src="../assets/logo/rediones-color.svg"
               alt=""
-              class="rounded-full size-12 mr-[14px] border-2 border-[#e8e8e8] p-[2px] flex justify-center items-center"
+              class="rounded-full size-12 mr-[14px] border-2 border-[#e8e8e8] p-[2px] flex justify-center items-center cursor-pointer"
             />
             <div class="mb-2">
               <h4>Rediones</h4>
-              <a href="" target="_blank" rel="noopener noreferrer"
-                ><h6>https://www.Rediones.com</h6></a
+              <a target="_blank" rel="noopener noreferrer"
+                ><h6>www.rediones.com</h6></a
               >
             </div>
           </div>
@@ -338,7 +340,7 @@
             <div class="mb-2">
               <h4>Search Agent</h4>
               <a href="" target="_blank" rel="noopener noreferrer"
-                ><h6>https://www.Search-agent.com</h6></a
+                ><h6>www.search-agent.com</h6></a
               >
             </div>
           </div>
@@ -447,12 +449,12 @@
               class="rounded-full size-12 mr-[14px] border-2 border-[#e8e8e8] p-[2px]"
             />
             <div class="mb-2">
-              <h4>The Hague University Reserach Group</h4>
+              <h4>The Technology for Healthcare Research Group</h4>
               <a
                 href="https://www.thuas.com/research/research-groups/technology-health-care"
                 target="_blank"
                 rel="noopener noreferrer"
-                ><h6>https://www.technologyofhealthcareresearchgroup.com</h6></a
+                ><h6>www.technologyforhealthcareresearchgroup.com</h6></a
               >
             </div>
           </div>
@@ -764,6 +766,111 @@
           </dialog>
         </div>
 
+        <!-- Waag -->
+        <div class="flex flex-col mb-[36px] w-[490px]">
+          <div class="flex">
+            <img
+              src="../assets/logo/waag.svg"
+              alt=""
+              class="rounded-full size-12 mr-[14px] border-2 border-[#e8e8e8] p-[2px]"
+            />
+            <div class="mb-2">
+              <h4>Waag</h4>
+              <a
+                href="https://waag.org/en/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><h6>www.waag.com</h6></a
+              >
+            </div>
+          </div>
+          <div class="line-clamp-2 open-btn cursor-pointer">
+            <h5>
+              Waag sought a creative solution to better visualize their air
+              quality data, aiming to raise greater awareness about the issue.
+              Along with three others, I was tasked with addressing this
+              challenge.
+            </h5>
+          </div>
+
+          <!-- dialog starts here -->
+          <dialog
+            class="modal max-w-[1000px] p-5 flex-col bg-[#faf9f6] rounded-2xl outline-none text-[#0a0a0a]"
+          >
+            <!-- cancel icon starts here -->
+            <div
+              class="h-[36px] close-btn float-end rounded-2xl cursor-pointer"
+            >
+              <img src="../assets/logo/close-fill.svg" alt="" />
+            </div>
+
+            <!-- hero image + info starts here -->
+            <div class="flex w-full">
+              <img
+                src="../assets/images/Airbox front.png"
+                alt=""
+                class="w-[498px] h-[256px] mr-5 rounded-xl border-2 border-[#e8e8e8]"
+              />
+              <div class="space-y-5 flex flex-col justify-center">
+                <!-- aboust starts here -->
+                <div class="flex items-start">
+                  <h3 class="w-[5rem] mr-5">About</h3>
+                  <p>
+                    Waag sought a creative solution to better visualize their
+                    air quality data, aiming to raise greater awareness about
+                    the issue. Along with three others, I was tasked with
+                    addressing this challenge. We developed the Airbox
+                    prototype, which utilized Waag's data to display air quality
+                    through dynamic visual effects using lights and smoke.
+                  </p>
+                </div>
+
+                <!-- role starts here -->
+                <div class="flex items-center">
+                  <h3 class="w-[63px] mr-5">Role</h3>
+                  <p>Industrial Design Engineer</p>
+                </div>
+
+                <!-- stack starts here -->
+                <div class="flex items-center">
+                  <h3 class="w-[63px] mr-5">Stack</h3>
+                  <img src="../assets/logo/blender-fill.svg" alt="" />
+                </div>
+              </div>
+            </div>
+
+            <!-- deisgn proces starst here -->
+            <div class="mt-[60px] flex justify-between gap-3">
+              <h3>Design Process</h3>
+              <div
+                class="border-[#0a0a0a] border-2 w-[100px] h-[112px] rounded-lg flex items-center justify-center"
+              >
+                <h1>1</h1>
+              </div>
+              <div
+                class="border-[#0a0a0a] border-2 w-[100px] h-[112px] rounded-lg flex items-center justify-center"
+              >
+                <h1>2</h1>
+              </div>
+              <div
+                class="border-[#0a0a0a] border-2 w-[100px] h-[112px] rounded-lg flex items-center justify-center"
+              >
+                <h1>3</h1>
+              </div>
+              <div
+                class="border-[#0a0a0a] border-2 w-[100px] h-[112px] rounded-lg flex items-center justify-center"
+              >
+                <h1>4</h1>
+              </div>
+              <div
+                class="border-[#0a0a0a] border-2 w-[100px] h-[112px] rounded-lg flex items-center justify-center"
+              >
+                <h1>5</h1>
+              </div>
+            </div>
+          </dialog>
+        </div>
+
         <!-- Wildwest -->
         <div class="flex flex-col mb-[36px] w-[490px]">
           <div class="flex">
@@ -775,7 +882,7 @@
             <div class="mb-2">
               <h4>Wild West</h4>
               <a
-                href="https://theformulacruisers.com/"
+                href="https://www.tiktok.com/@wildwest_fut"
                 target="_blank"
                 rel="noopener noreferrer"
                 ><h6>www.wildwest.com</h6></a
@@ -876,111 +983,6 @@
           </dialog>
         </div>
 
-        <!-- Waag -->
-        <div class="flex flex-col mb-[36px] w-[490px]">
-          <div class="flex">
-            <img
-              src="../assets/logo/waag.svg"
-              alt=""
-              class="rounded-full size-12 mr-[14px] border-2 border-[#e8e8e8] p-[2px]"
-            />
-            <div class="mb-2">
-              <h4>Waag</h4>
-              <a
-                href="https://theformulacruisers.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><h6>www.wildwest.com</h6></a
-              >
-            </div>
-          </div>
-          <div class="line-clamp-2 open-btn cursor-pointer">
-            <h5>
-              Waag sought a creative solution to better visualize their air
-              quality data, aiming to raise greater awareness about the issue.
-              Along with three others, I was tasked with addressing this
-              challenge.
-            </h5>
-          </div>
-
-          <!-- dialog starts here -->
-          <dialog
-            class="modal max-w-[1000px] p-5 flex-col bg-[#faf9f6] rounded-2xl outline-none text-[#0a0a0a]"
-          >
-            <!-- cancel icon starts here -->
-            <div
-              class="h-[36px] close-btn float-end rounded-2xl cursor-pointer"
-            >
-              <img src="../assets/logo/close-fill.svg" alt="" />
-            </div>
-
-            <!-- hero image + info starts here -->
-            <div class="flex w-full">
-              <img
-                src="../assets/images/Airbox front.png"
-                alt=""
-                class="w-[498px] h-[256px] mr-5 rounded-xl border-2 border-[#e8e8e8]"
-              />
-              <div class="space-y-5 flex flex-col justify-center">
-                <!-- aboust starts here -->
-                <div class="flex items-start">
-                  <h3 class="w-[5rem] mr-5">About</h3>
-                  <p>
-                    Waag sought a creative solution to better visualize their
-                    air quality data, aiming to raise greater awareness about
-                    the issue. Along with three others, I was tasked with
-                    addressing this challenge. We developed the Airbox
-                    prototype, which utilized Waag's data to display air quality
-                    through dynamic visual effects using lights and smoke.
-                  </p>
-                </div>
-
-                <!-- role starts here -->
-                <div class="flex items-center">
-                  <h3 class="w-[63px] mr-5">Role</h3>
-                  <p>Industrial Design Engineer</p>
-                </div>
-
-                <!-- stack starts here -->
-                <div class="flex items-center">
-                  <h3 class="w-[63px] mr-5">Stack</h3>
-                  <img src="../assets/logo/blender-fill.svg" alt="" />
-                </div>
-              </div>
-            </div>
-
-            <!-- deisgn proces starst here -->
-            <div class="mt-[60px] flex justify-between gap-3">
-              <h3>Design Process</h3>
-              <div
-                class="border-[#0a0a0a] border-2 w-[100px] h-[112px] rounded-lg flex items-center justify-center"
-              >
-                <h1>1</h1>
-              </div>
-              <div
-                class="border-[#0a0a0a] border-2 w-[100px] h-[112px] rounded-lg flex items-center justify-center"
-              >
-                <h1>2</h1>
-              </div>
-              <div
-                class="border-[#0a0a0a] border-2 w-[100px] h-[112px] rounded-lg flex items-center justify-center"
-              >
-                <h1>3</h1>
-              </div>
-              <div
-                class="border-[#0a0a0a] border-2 w-[100px] h-[112px] rounded-lg flex items-center justify-center"
-              >
-                <h1>4</h1>
-              </div>
-              <div
-                class="border-[#0a0a0a] border-2 w-[100px] h-[112px] rounded-lg flex items-center justify-center"
-              >
-                <h1>5</h1>
-              </div>
-            </div>
-          </dialog>
-        </div>
-
         <!-- Ahrend -->
         <div class="flex flex-col mb-[36px] w-[490px]">
           <div class="flex">
@@ -990,12 +992,12 @@
               class="rounded-full size-12 mr-[14px] border-2 border-[#e8e8e8] p-[2px]"
             />
             <div class="mb-2">
-              <h4>Waag</h4>
+              <h4>Ahrend</h4>
               <a
-                href="https://theformulacruisers.com/"
+                href="https://www.ahrend.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                ><h6>www.wildwest.com</h6></a
+                ><h6>www.ahrend.com</h6></a
               >
             </div>
           </div>
@@ -1107,12 +1109,163 @@
         <!-- Experience section -->
         <section>
           <h3 class="mb-[25px]">Experience</h3>
+
+          <!-- rediones -->
           <div class="flex mb-[27px]">
-            <img src="../assets/logo/thaus-color.svg" alt="" />
+            <div class="w-[138px] flex items-center justify-center">
+              <img src="../assets/logo/rediones-color.svg" alt="" />
+            </div>
+
             <div class="ml-3">
-              <h5 class="font-bold">Technology of Healthcare Research Group</h5>
-              <h6>Product Designer Engineer</h6>
+              <h5>Project Manager</h5>
+              <h6>Rediones</h6>
+              <h6 class="font-light">Jan 2024 - Present</h6>
+            </div>
+          </div>
+
+          <!-- serach agent -->
+          <div class="flex mb-[27px]">
+            <div class="w-[138px] flex items-center justify-center">
+              <img src="../assets/logo/searchagent.svg" alt="" />
+            </div>
+
+            <div class="ml-3">
+              <h5>Full Stack Developer and Project Manager</h5>
+              <h6>Search Agent</h6>
+              <h6 class="font-light">Oct 2024 - Nov 2024</h6>
+            </div>
+          </div>
+
+          <!-- research group -->
+          <div class="flex mb-[27px]">
+            <div class="w-[138px] flex items-center justify-center">
+              <img src="../assets/logo/thaus-color.svg" alt="" />
+            </div>
+
+            <div class="ml-3">
+              <h5>Industrial Designer Engineer</h5>
+              <h6>Technology of Healthcare Research Group</h6>
               <h6 class="font-light">Nov 2023 - Apr 2024</h6>
+            </div>
+          </div>
+
+          <!-- formula cruiser -->
+          <div class="flex mb-[27px]">
+            <div class="w-[138px] flex items-center justify-center">
+              <img src="../assets/logo/fc-color.svg" alt="" />
+            </div>
+
+            <div class="ml-3">
+              <h5>Brand Designer</h5>
+              <h6>Formula Cruiser</h6>
+              <h6 class="font-light">Sep 2022 - Feb 2023</h6>
+            </div>
+          </div>
+
+          <!-- HU4 -->
+          <div class="flex mb-[27px]">
+            <div class="w-[138px] flex items-center justify-center">
+              <img src="../assets/logo/fc-color.svg" alt="" />
+            </div>
+
+            <div class="ml-3">
+              <h5>Industial Design Engineer</h5>
+              <h6>Formula Cruiser</h6>
+              <h6 class="font-light">Feb 2022 - May 2022</h6>
+            </div>
+          </div>
+
+          <!-- Waag -->
+          <div class="flex mb-[27px]">
+            <div class="w-[138px] flex items-center justify-center">
+              <img src="../assets/logo/waag.svg" alt="" />
+            </div>
+
+            <div class="ml-3">
+              <h5>Industial Design Engineer</h5>
+              <h6>Waag</h6>
+              <h6 class="font-light">Sep 2021 - Feb 2022</h6>
+            </div>
+          </div>
+
+          <!-- Wildwest -->
+          <div class="flex mb-[27px]">
+            <div class="w-[138px] flex items-center justify-center">
+              <img src="../assets/logo/wildwest.svg" alt="" />
+            </div>
+
+            <div class="ml-3">
+              <h5 class="font-bold">Content Creator and Project manager</h5>
+              <h6>Wildwest</h6>
+              <h6 class="font-light">Mar 2021 - Jul 2022</h6>
+            </div>
+          </div>
+
+          <!-- Ahrend -->
+          <div class="flex mb-[36px]">
+            <div class="w-[138px] flex items-center justify-center">
+              <img src="../assets/logo/ahrend-color.svg" alt="" />
+            </div>
+
+            <div class="ml-3">
+              <h5 class="font-bold">Industial Design Engineer</h5>
+              <h6>Ahrend</h6>
+              <h6 class="font-light">Sep 2020 - Feb 2021</h6>
+            </div>
+          </div>
+        </section>
+
+        <!-- Education -->
+        <section>
+          <h3 class="mb-[25px]">Experience</h3>
+
+          <!-- thaus -->
+          <div class="flex mb-[36px]">
+            <div class="w-[138px] flex items-center justify-center">
+              <img src="../assets/logo/thaus-color.svg" alt="" />
+            </div>
+
+            <div class="ml-3">
+              <h5>The Hague University of Applied Science</h5>
+              <h6>Bsc Industrial Designer Engineer</h6>
+            </div>
+          </div>
+        </section>
+
+        <!-- Certification -->
+        <section>
+          <h3 class="mb-[25px]">Certification</h3>
+
+          <!-- Google -->
+          <div class="flex mb-[27px]">
+            <div class="w-[138px] flex items-center justify-center">
+              <img src="../assets/logo/google.svg" alt="" />
+            </div>
+            <div class="ml-3">
+              <h5>
+                Google Professional Project Managemenet <br />
+                specialization
+              </h5>
+            </div>
+          </div>
+
+          <!-- Havard -->
+          <div class="flex mb-[27px]">
+            <div class="w-[138px] flex items-center justify-center">
+              <img src="../assets/logo/harvard.svg" alt="" />
+            </div>
+            <div class="ml-3">
+              <h5>Havard CS50: Introduction to python</h5>
+            </div>
+          </div>
+
+          <!-- Meta -->
+          <div class="flex mb-[27px]">
+            <div class="w-[138px] flex items-center justify-center">
+              <img src="../assets/logo/meta.svg" alt="" />
+            </div>
+            <div class="ml-3">
+              <h5>Front-End Developer Professioanl Certificate</h5>
             </div>
           </div>
         </section>
