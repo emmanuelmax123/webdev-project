@@ -1,11 +1,15 @@
-const modal = document.querySelector("#modal");
-const openmodal = document.querySelector(".open-btn");
-const closemodal = document.querySelector(".close-btn");
+const modals = document.querySelectorAll(".modal");
+const openbtn = document.querySelectorAll(".open-btn");
+const closebtn = document.querySelectorAll(".close-btn");
 
-openmodal.addEventListener("click", () => {
-  modal.showModal();
+openbtn.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    modals[index].showModal();
+  });
 });
 
-closemodal.addEventListener("click", () => {
-  modal.close();
+closebtn.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    modals[index].close();
+  });
 });
