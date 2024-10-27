@@ -89,3 +89,13 @@ function runimages() {
         <img src="../assets/images/rediones5 1.jpg" alt="" class="rounded-lg">
       </div>`;
 }
+
+function runProjects() {
+  const aboutsection = document.querySelector(".js-aboutsection");
+  const mainLine = document.querySelector(".js-main");
+  const aboutMe = document.querySelector(".js-aboutMe");
+  aboutsection.classList.add("hidden");
+  aboutMe.classList.add("hidden");
+  mainLine.classList.remove("border-r-2", "border-r-[#e8e8e8]");
+  console.log("works");
+}
