@@ -54,9 +54,14 @@ filterBtn.forEach((btn) => {
 });
 
 function runimages() {
-  document.querySelector(
-    ".js-imgSection"
-  ).innerHTML = `<div class="columns-[300px] px-4 py-10 space-y-5">
+  const profile = document.querySelector(".js-profile");
+  const maincontent = document.querySelector(".js-maincontent");
+  profile.classList.add("hidden");
+  maincontent.classList.add("hidden");
+
+  const image = document.querySelector(".js-imgSection");
+  image.classList.remove("hidden");
+  image.innerHTML = `<div class="columns-[300px] px-4 py-10 space-y-5">
         <img
           src="../assets/images/04F80FF3-4A7B-4AA2-BF76-DB760FBB51C1.jpg"
           alt=""
@@ -94,6 +99,14 @@ function runProjects() {
   const aboutsection = document.querySelector(".js-aboutsection");
   const mainLine = document.querySelector(".js-main");
   const aboutMe = document.querySelector(".js-aboutMe");
+  const profile = document.querySelector(".js-profile");
+  const maincontent = document.querySelector(".js-maincontent");
+  const image = document.querySelector(".js-imgSection");
+
+  image.classList.add("hidden");
+  profile.classList.remove("hidden");
+  maincontent.classList.remove("hidden");
+
   aboutsection.classList.add("hidden");
   aboutMe.classList.add("hidden");
   mainLine.classList.remove("border-r-2", "border-r-[#e8e8e8]");
