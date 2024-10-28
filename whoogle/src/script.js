@@ -202,49 +202,53 @@ const faqs = [
 
 const faqContainer = document.querySelector(".js-faqs");
 
-function createFaqItem(text, answer = "", isMain = true) {
+function createFaqItem(questionText, answerText = "", isMain = true) {
   const faqItem = document.createElement("div");
   faqItem.classList.add("border-b-2", "border-b-[#0a0a0a]", "py-[12px]");
 
   faqItem.innerHTML = `
     <div class="flex justify-between question">
-      <h5 class="font-bold">${text}</h5>
-      <img src="../assets/logo/arrow-drop-down-line (1).svg" alt="faq toggle" />
+      <h5 class="font-bold">${questionText}</h5>
+      <img src="../assets/logo/arrow-drop-down-line (1).svg" alt="faq toggle down" class="arrow-down"/>
+      <img src="../assets/logo/arrow-drop-up-line.svg" alt="faq toggle up" class="arrow-up hidden"/>
     </div>
-    <p class="hidden answer py-2">${answer}</p>
+    <p class="hidden answer py-2">${answerText}</p>
   `;
 
   // Event handling for main or sub-questions
   faqItem.querySelector(".question").addEventListener("click", () => {
     const answerElement = faqItem.querySelector(".answer");
+    const arrowDown = faqItem.querySelector(".arrow-down");
+    const arrowUp = faqItem.querySelector(".arrow-up");
+
+    // Toggle the answer visibility
     answerElement.classList.toggle("hidden");
+
+    // Toggle visibility of the arrows
+    arrowDown.classList.toggle("hidden");
+    arrowUp.classList.toggle("hidden");
   });
 
   return faqItem;
 }
 
-// Generate the FAQ
+// Load FAQs and sub-questions
 faqs.forEach((faq) => {
-  // Create and add the main question
+  // Create main FAQ item and append to the container
   const mainFaqItem = createFaqItem(faq.question, faq.answer);
   faqContainer.appendChild(mainFaqItem);
 
-  // Track whether sub-questions have been created
-  let subQuestionsCreated = false;
+  let subQuestionsCreated = false; // Flag to check if sub-questions are generated
 
-  // Show sub-questions when the main question is clicked
+  // Event listener for main question to load sub-questions on first click
   mainFaqItem.querySelector(".question").addEventListener("click", () => {
-    const answerElement = mainFaqItem.querySelector(".answer");
-    answerElement.classList.toggle("hidden");
-
-    // Only create sub-questions if they haven't been created yet
     if (!subQuestionsCreated) {
       faq.subQuestions.forEach((sub) => {
         const subFaqItem = createFaqItem(sub.subQuestion, sub.subAnswer, false);
         subFaqItem.classList.add("sub-question");
-        mainFaqItem.insertAdjacentElement("afterend", subFaqItem);
+        faqContainer.insertBefore(subFaqItem, mainFaqItem.nextSibling);
       });
-      subQuestionsCreated = true;
+      subQuestionsCreated = true; // Prevent re-adding sub-questions on subsequent clicks
     }
   });
 });
