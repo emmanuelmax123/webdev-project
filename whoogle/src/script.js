@@ -97,6 +97,7 @@ function runimages() {
 
 function runProjects() {
   const aboutsection = document.querySelector(".js-aboutsection");
+  const faq = document.querySelector(".js-faq");
   const mainLine = document.querySelector(".js-main");
   const aboutMe = document.querySelector(".js-aboutMe");
   const profile = document.querySelector(".js-profile");
@@ -108,7 +109,96 @@ function runProjects() {
   maincontent.classList.remove("hidden");
 
   aboutsection.classList.add("hidden");
+  faq.classList.add("hidden");
   aboutMe.classList.add("hidden");
   mainLine.classList.remove("border-r-2", "border-r-[#e8e8e8]");
   console.log("works");
 }
+
+// faq starts here
+const faqs = [
+  // question 1 starts
+  {
+    question: "What projects have you worked on?",
+    answer: "blue",
+    subQuestions: [
+      {
+        subQuestion: "What industries have you worked in?",
+        subAnswer: "ball",
+      },
+      {
+        subQuestion: "What is your experience with project management?",
+        subAnswer: "black",
+      },
+      {
+        subQuestion: "Can you tell me more about your startup, Rediones?",
+        subAnswer: "ball",
+      },
+    ],
+  },
+
+  // question 2 starts
+  {
+    question: " What skills and technologies do you specialize in?",
+    answer: "blue",
+    subQuestions: [
+      {
+        subQuestion: "What languages and frameworks do you use?",
+        subAnswer: "ball",
+      },
+      {
+        subQuestion: "What skills do you specialize in?",
+        subAnswer: "black",
+      },
+    ],
+  },
+];
+
+const faqContainer = document.querySelector(".js-faqs");
+
+function createFaqItem(text, answer = "", isMain = true) {
+  const faqItem = document.createElement("div");
+  faqItem.classList.add("border-b-2", "border-b-[#0a0a0a]", "py-[12px]");
+
+  faqItem.innerHTML = `
+    <div class="flex justify-between question">
+      <h4>${text}</h4>
+      <img src="../assets/logo/arrow-drop-down-line (1).svg" alt="faq toggle" />
+    </div>
+    <p class="hidden answer">${answer}</p>
+  `;
+
+  // Event handling for main or sub-questions
+  faqItem.querySelector(".question").addEventListener("click", () => {
+    const answerElement = faqItem.querySelector(".answer");
+    answerElement.classList.toggle("hidden");
+  });
+
+  return faqItem;
+}
+
+// Generate the FAQ
+faqs.forEach((faq) => {
+  // Create and add the main question
+  const mainFaqItem = createFaqItem(faq.question, faq.answer);
+  faqContainer.appendChild(mainFaqItem);
+
+  // Track whether sub-questions have been created
+  let subQuestionsCreated = false;
+
+  // Show sub-questions when the main question is clicked
+  mainFaqItem.querySelector(".question").addEventListener("click", () => {
+    const answerElement = mainFaqItem.querySelector(".answer");
+    answerElement.classList.toggle("hidden");
+
+    // Only create sub-questions if they haven't been created yet
+    if (!subQuestionsCreated) {
+      faq.subQuestions.forEach((sub) => {
+        const subFaqItem = createFaqItem(sub.subQuestion, sub.subAnswer, false);
+        subFaqItem.classList.add("sub-question");
+        mainFaqItem.insertAdjacentElement("afterend", subFaqItem);
+      });
+      subQuestionsCreated = true;
+    }
+  });
+});

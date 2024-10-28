@@ -590,6 +590,40 @@ h6 {
   color: rgb(10 10 10 / var(--tw-text-opacity));
 }
 
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
 .absolute {
   position: absolute;
 }
@@ -626,6 +660,10 @@ h6 {
 
 .mb-2 {
   margin-bottom: 0.5rem;
+}
+
+.mb-\[24px\] {
+  margin-bottom: 24px;
 }
 
 .mb-\[25px\] {
@@ -708,6 +746,30 @@ h6 {
   margin-top: 60px;
 }
 
+.ml-4 {
+  margin-left: 1rem;
+}
+
+.mt-\[100px\] {
+  margin-top: 100px;
+}
+
+.mt-\[150px\] {
+  margin-top: 150px;
+}
+
+.mt-\[50px\] {
+  margin-top: 50px;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
 .line-clamp-2 {
   overflow: hidden;
   display: -webkit-box;
@@ -769,6 +831,11 @@ h6 {
   height: 100%;
 }
 
+.h-fit {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
 .w-\[100px\] {
   width: 100px;
 }
@@ -811,6 +878,10 @@ h6 {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[500px\] {
+  width: 500px;
 }
 
 .max-w-\[1000px\] {
@@ -932,6 +1003,10 @@ h6 {
   border-right-width: 2px;
 }
 
+.border-l-2 {
+  border-left-width: 2px;
+}
+
 .border-\[\#0a0a0a\] {
   --tw-border-opacity: 1;
   border-color: rgb(10 10 10 / var(--tw-border-opacity));
@@ -942,6 +1017,16 @@ h6 {
   border-color: rgb(232 232 232 / var(--tw-border-opacity));
 }
 
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
+.border-b-\[\#0a0a0a\] {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(10 10 10 / var(--tw-border-opacity));
+}
+
 .border-b-\[\#e8e8e8\] {
   --tw-border-opacity: 1;
   border-bottom-color: rgb(232 232 232 / var(--tw-border-opacity));
@@ -950,6 +1035,11 @@ h6 {
 .border-r-\[\#e8e8e8\] {
   --tw-border-opacity: 1;
   border-right-color: rgb(232 232 232 / var(--tw-border-opacity));
+}
+
+.border-l-\[\#e8e8e8\] {
+  --tw-border-opacity: 1;
+  border-left-color: rgb(232 232 232 / var(--tw-border-opacity));
 }
 
 .bg-\[\#E8E8E8\] {
@@ -984,6 +1074,14 @@ h6 {
   padding: 2px;
 }
 
+.p-4 {
+  padding: 1rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -1014,8 +1112,35 @@ h6 {
   padding-bottom: 1rem;
 }
 
+.py-\[18px\] {
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.py-\[12px\] {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.py-\[8px\] {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
 .pb-1 {
   padding-bottom: 0.25rem;
+}
+
+.pb-\[24px\] {
+  padding-bottom: 24px;
+}
+
+.pl-8 {
+  padding-left: 2rem;
+}
+
+.pl-4 {
+  padding-left: 1rem;
 }
 
 .font-sans {

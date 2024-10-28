@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Whoogle</title>
+    <title>lookup</title>
     <link rel="stylesheet" href="output.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,7 +16,7 @@
     <!-- header starts here -->
     <header class="flex items-center justify-between h-11 mx-5 mt-10 mb-[52px]">
       <div class="flex h-11">
-        <img src="../assets/logo/whoogle.svg" alt="whoogle logo" />
+        <img src="../assets/logo/logo.svg" alt="lookup logo" />
         <div
           class="bg-[#E8E8E8] px-10 py-4 rounded-full w-[764px] ml-[31px] flex items-center text-[#0A0A0A]"
         >
@@ -258,7 +258,7 @@
         class="flex flex-col border-r-2 border-r-[#e8e8e8] w-full js-main"
       >
         <!-- Rediones start -->
-        <div class="flex flex-col mb-[36px] w-[490px] pm">
+        <div class="flex flex-col mb-[36px] w-[500px] pm">
           <div class="flex">
             <img
               src="../assets/logo/rediones-color.svg"
@@ -343,7 +343,7 @@
         </div>
 
         <!-- search agarnt start -->
-        <div class="flex flex-col mb-[36px] w-[490px] webdev pm">
+        <div class="flex flex-col mb-[36px] w-[500px] webdev pm">
           <div class="flex">
             <img
               src="../assets/logo/searchagent.svg"
@@ -454,7 +454,7 @@
         </div>
 
         <!-- mdt starts -->
-        <div class="flex flex-col mb-[36px] w-[490px] ide">
+        <div class="flex flex-col mb-[36px] w-[500px] ide">
           <div class="flex">
             <img
               src="../assets/logo/thaus.svg"
@@ -560,7 +560,7 @@
         </div>
 
         <!-- Formula Cruiser -->
-        <div class="flex flex-col mb-[36px] w-[490px] ide">
+        <div class="flex flex-col mb-[36px] w-[500px] ide">
           <div class="flex">
             <img
               src="../assets/logo/fc-color.svg"
@@ -680,9 +680,15 @@
         </div>
 
         <!-- People also ask starts  -->
+        <section class="mb-[52px] w-[500px] js-faq">
+          <h2 class="pb-[24px] border-b-2 border-b-[#0a0a0a]">
+            People also ask
+          </h2>
+          <div class="js-faqs"></div>
+        </section>
 
         <!-- HU4 -->
-        <div class="flex flex-col mb-[36px] w-[490px] ide">
+        <div class="flex flex-col mb-[36px] w-[500px] ide">
           <div class="flex">
             <img
               src="../assets/logo/fc-color.svg"
@@ -780,7 +786,7 @@
         </div>
 
         <!-- Waag -->
-        <div class="flex flex-col mb-[36px] w-[490px] ide">
+        <div class="flex flex-col mb-[36px] w-[500px] ide">
           <div class="flex">
             <img
               src="../assets/logo/waag.svg"
@@ -885,7 +891,7 @@
         </div>
 
         <!-- Wildwest -->
-        <div class="flex flex-col mb-[36px] w-[490px] pm">
+        <div class="flex flex-col mb-[36px] w-[500px] pm">
           <div class="flex">
             <img
               src="../assets/logo/wildwest.svg"
@@ -997,7 +1003,7 @@
         </div>
 
         <!-- Ahrend -->
-        <div class="flex flex-col mb-[36px] w-[490px] ide">
+        <div class="flex flex-col mb-[36px] w-[500px] ide">
           <div class="flex">
             <img
               src="../assets/logo/ahrend.svg"
@@ -1091,6 +1097,17 @@
               </div>
             </div>
           </dialog>
+        </div>
+
+        <!-- end of scetion-->
+        <div
+          class="flex flex-col justify-center items-center w-[500px] mt-[50px]"
+        >
+          <h5>
+            Some results may have been removed under data protection law in
+            Europe.
+          </h5>
+          <img src="../assets/images/lookup.svg" alt="" />
         </div>
       </section>
 
@@ -1284,8 +1301,14 @@
         </section>
       </section>
     </div>
-    <!-- this div was created for the images saction -->
-    <div class="js-imgSection hidden"></div>
+
+    <!-- this section was created to hold the images saction -->
+    <section class="js-imgSection hidden"></section>
+
+    <!-- footer starts  -->
+    <footer class="p-6 mt-6">
+      <p class="flex justify-end">&copy; 2024 Lookup. All rights reserved.</p>
+    </footer>
   </body>
 
   <script src="script.js"></script>
