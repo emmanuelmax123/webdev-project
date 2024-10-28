@@ -770,6 +770,10 @@ h6 {
   margin-top: 1.5rem;
 }
 
+.mr-\[25px\] {
+  margin-right: 25px;
+}
+
 .line-clamp-2 {
   overflow: hidden;
   display: -webkit-box;
@@ -995,6 +999,10 @@ h6 {
   border-width: 2px;
 }
 
+.border-0 {
+  border-width: 0px;
+}
+
 .border-b-2 {
   border-bottom-width: 2px;
 }
@@ -1005,6 +1013,10 @@ h6 {
 
 .border-l-2 {
   border-left-width: 2px;
+}
+
+.border-none {
+  border-style: none;
 }
 
 .border-\[\#0a0a0a\] {
@@ -1127,6 +1139,16 @@ h6 {
   padding-bottom: 8px;
 }
 
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
 .pb-1 {
   padding-bottom: 0.25rem;
 }
@@ -1141,6 +1163,14 @@ h6 {
 
 .pl-4 {
   padding-left: 1rem;
+}
+
+.pl-5 {
+  padding-left: 1.25rem;
+}
+
+.pr-6 {
+  padding-right: 1.5rem;
 }
 
 .font-sans {

@@ -119,36 +119,82 @@ function runProjects() {
 const faqs = [
   // question 1 starts
   {
-    question: "What projects have you worked on?",
-    answer: "blue",
+    question: "What is your approach to managing complex projects?",
+    answer:
+      "My approach involves breaking down the project into manageable tasks, setting clear milestones, and prioritizing based on urgency and impact. I focus on consistent communication with stakeholders to ensure alignment at every phase.",
     subQuestions: [
       {
-        subQuestion: "What industries have you worked in?",
-        subAnswer: "ball",
+        subQuestion: "How do you prioritize tasks in a high-stakes project?",
+        subAnswer:
+          "I assess urgency and impact, then organize tasks to ensure that high-priority items receive immediate focus.",
       },
       {
-        subQuestion: "What is your experience with project management?",
-        subAnswer: "black",
+        subQuestion: "Why do you have experience in three different roles?",
+        subAnswer:
+          "I believe that having skills across Project Management, Web Development, and Industrial Design Engineering makes me a more versatile professional and allows me to tackle complex projects from multiple perspectives.",
       },
       {
-        subQuestion: "Can you tell me more about your startup, Rediones?",
-        subAnswer: "ball",
+        subQuestion: "What project management tools do you typically use?",
+        subAnswer:
+          "I often use Excel and Notion due to the expense of tools like Asana, Jira, or Trello but i do have experince using them during my time at the Formula Cruiser. For communication, I rely on Teams, Google Meet, or WhatsApp.",
       },
     ],
   },
 
   // question 2 starts
   {
-    question: " What skills and technologies do you specialize in?",
-    answer: "blue",
+    question:
+      "How do you ensure that your websites are user-friendly and responsive?",
+    answer:
+      "I prioritize simplicity and intuitive design. I use a mobile-first approach, test on multiple devices, and implement responsive layouts to ensure a consistent user experience across screen sizes.",
     subQuestions: [
       {
-        subQuestion: "What languages and frameworks do you use?",
-        subAnswer: "ball",
+        subQuestion: "What technologies do you use for front-end development?",
+        subAnswer:
+          "I frequently work with HTML, CSS (Tailwind CSS), and JavaScript, alongside libraries like React and Next.js",
       },
       {
-        subQuestion: "What skills do you specialize in?",
-        subAnswer: "black",
+        subQuestion: "How do you optimize a website for speed and performance?",
+        subAnswer:
+          "I use lazy loading, and optimize images to minimize load times.",
+      },
+    ],
+  },
+  // question 3 starts
+  {
+    question: "What is your process for designing user-centered products?",
+    answer:
+      "My process begins with understanding user needs through research and translating findings into design solutions. I balance form and function to create products that are both practical and appealing.",
+    subQuestions: [
+      {
+        subQuestion: "How do you conduct user research for a project?",
+        subAnswer:
+          "I use surveys, interviews, and usability tests to understand user needs and preferences.",
+      },
+      {
+        subQuestion:
+          "How do you balance aesthetics and functionality in design?",
+        subAnswer:
+          "I always aim to create designs that are visually appealing but also practical and user-friendly.",
+      },
+    ],
+  },
+  // question 4 starts
+  {
+    question: "How can someone contact you for collaboration?",
+    answer:
+      "You can reach me through my email or connect with me on LinkedIn. I'm always open to discussing potential collaborations!",
+    subQuestions: [
+      {
+        subQuestion: "Do you offer freelance services?",
+        subAnswer:
+          "Yes, I'm open to freelance opportunities. You can reach me through my email or connect with me on LinkedIn.",
+      },
+
+      {
+        subQuestion: "What inspired the unique design of your portfolio?",
+        subAnswer:
+          "My inspiration came from Oliver Edwards 2020 Groogle's portfolio.",
       },
     ],
   },
@@ -162,10 +208,10 @@ function createFaqItem(text, answer = "", isMain = true) {
 
   faqItem.innerHTML = `
     <div class="flex justify-between question">
-      <h4>${text}</h4>
+      <h5 class="font-bold">${text}</h5>
       <img src="../assets/logo/arrow-drop-down-line (1).svg" alt="faq toggle" />
     </div>
-    <p class="hidden answer">${answer}</p>
+    <p class="hidden answer py-2">${answer}</p>
   `;
 
   // Event handling for main or sub-questions
