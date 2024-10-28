@@ -17,6 +17,7 @@ closebtn.forEach((btn, index) => {
 const filterBtn = document.querySelectorAll(".filter-btn");
 const sections = document.querySelectorAll(".ide, .pm, .webdev");
 const aboutMe = document.querySelector(".js-aboutMe");
+const longlogo = document.querySelector(".js-longLogo");
 
 filterBtn.forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -34,8 +35,10 @@ filterBtn.forEach((btn) => {
         section.classList.remove("hidden");
       });
       aboutMe.classList.remove("hidden");
+      longlogo.classList.remove("hidden");
     } else {
       aboutMe.classList.add("hidden");
+      longlogo.classList.add("hidden");
 
       // show filter section
       sections.forEach((section) => {
@@ -103,11 +106,13 @@ function runProjects() {
   const profile = document.querySelector(".js-profile");
   const maincontent = document.querySelector(".js-maincontent");
   const image = document.querySelector(".js-imgSection");
+  const longlogo = document.querySelector(".js-longLogo");
 
   image.classList.add("hidden");
   profile.classList.remove("hidden");
   maincontent.classList.remove("hidden");
 
+  longlogo.classList.add("hidden");
   aboutsection.classList.add("hidden");
   faq.classList.add("hidden");
   aboutMe.classList.add("hidden");
