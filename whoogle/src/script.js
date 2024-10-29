@@ -1,3 +1,24 @@
+const navlinks = document.querySelectorAll(".js-nav");
+
+navlinks.forEach((navlink) => {
+  navlink.addEventListener("click", () => {
+    // Remove 'opacity-100' from all navlines on click
+    document.querySelectorAll(".js-navline").forEach((line) => {
+      line.classList.remove("opacity-100");
+      // Ensure the navline resets to hidden
+      line.classList.add("opacity-0");
+    });
+
+    // Add 'opacity-100' to the clicked navline
+    const navline = navlink.querySelector(".js-navline");
+    if (navline) {
+      navline.classList.remove("opacity-0");
+      // Make sure it becomes visible
+      navline.classList.add("opacity-100");
+    }
+  });
+});
+
 const modals = document.querySelectorAll(".modal");
 const openbtn = document.querySelectorAll(".open-btn");
 const closebtn = document.querySelectorAll(".close-btn");
