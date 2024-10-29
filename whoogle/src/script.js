@@ -19,6 +19,16 @@ navlinks.forEach((navlink) => {
   });
 });
 
+// news section
+function myNews() {
+  const profile = document.querySelector(".js-profile");
+  const maincontent = document.querySelector(".js-maincontent");
+  const myNews = document.querySelector(".js-mynews");
+  profile.classList.add("hidden");
+  maincontent.classList.add("hidden");
+  myNews.classList.remove("hidden");
+}
+
 const modals = document.querySelectorAll(".modal");
 const openbtn = document.querySelectorAll(".open-btn");
 const closebtn = document.querySelectorAll(".close-btn");

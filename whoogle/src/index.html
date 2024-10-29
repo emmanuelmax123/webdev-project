@@ -62,19 +62,20 @@
           class="relative flex justify-center items-center mr-[50px] group cursor-pointer js-nav"
         >
           <a class="pb-1" onclick="runProjects()"
-            >Projects
+            >Work
             <span
               class="rounded-t-sm border-2 border-[#0a0a0a] absolute mt-[26px] left-0 right-0 opacity-0 js-navline"
             ></span>
           </a>
         </li>
 
-        <!-- skilss -->
+        <!-- News -->
         <li
-          class="relative flex justify-center items-center mr-[50px] group js-nav"
+          class="relative flex justify-center items-center mr-[50px] group js-nav cursor-pointer"
+          onclick="myNews()"
         >
-          <a href="" class="pb-1"
-            >Skills
+          <a class="pb-1"
+            >News
             <span
               class="rounded-t-sm border-2 border-[#0a0a0a] absolute mt-[26px] left-0 right-0 opacity-0 js-navline"
             ></span>
@@ -448,7 +449,7 @@
         <div class="flex flex-col mb-[36px] w-[500px] ide">
           <div class="flex">
             <img
-              src="../assets/logo/thaus.svg"
+              src="../assets/logo/thaus-color.svg"
               alt=""
               class="rounded-full size-12 mr-[14px] border-2 border-[#e8e8e8] p-[2px]"
             />
@@ -851,7 +852,7 @@
         <div class="flex flex-col mb-[36px] w-[500px] ide">
           <div class="flex">
             <img
-              src="../assets/logo/ahrend.svg"
+              src="../assets/logo/ahrend-color.svg"
               alt=""
               class="rounded-full size-12 mr-[14px] border-2 border-[#e8e8e8] p-[2px]"
             />
@@ -933,13 +934,13 @@
           <h3 class="mt-[23px] mb-[25px]">About</h3>
           <p>
             Kolawole, also known as Kola, is a product designer, project
-            manager, and front-end developer who aspires to become a technical
-            project manager. He has experience working with multidisciplinary
-            teams and always maintains a user-centric focus.
+            manager, and front-end developer. He has experience working with
+            multidisciplinary teams and always aims maintains a user-centric
+            focus.
           </p>
           <br />
           <p>
-            Born:November 23, 2000
+            Born: November 23, 2000
             <a
               href="https://www.google.com/maps/place/Abeokuta,+Ogun+State,+Nigeria/@7.167355,3.277574,12z/data=!3m1!4b1!4m6!3m5!1s0x103a4bf6995dfc7f:0x6734fcf62892478d!8m2!3d7.147502!4d3.3619356!16zL20vMDEwZHI?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D"
               class="text-[#1036FF]"
@@ -970,7 +971,7 @@
           <!-- serach agent -->
           <div class="flex mb-[27px]">
             <div class="w-[138px] flex items-center justify-center">
-              <img src="../assets/logo/searchagent.svg" alt="" />
+              <img src="../assets/logo/serachagent-color.svg" alt="" />
             </div>
 
             <div class="ml-3">
@@ -1022,7 +1023,7 @@
           <!-- Waag -->
           <div class="flex mb-[27px]">
             <div class="w-[138px] flex items-center justify-center">
-              <img src="../assets/logo/waag.svg" alt="" />
+              <img src="../assets/logo/waag-color.svg" alt="" />
             </div>
 
             <div class="ml-3">
@@ -1035,7 +1036,7 @@
           <!-- Wildwest -->
           <div class="flex mb-[27px]">
             <div class="w-[138px] flex items-center justify-center">
-              <img src="../assets/logo/wildwest.svg" alt="" />
+              <img src="../assets/logo/ww-color.svg" alt="" />
             </div>
 
             <div class="ml-3">
@@ -1118,6 +1119,47 @@
 
     <!-- this section was created to hold the images saction -->
     <section class="js-imgSection hidden"></section>
+
+    <!-- this section was created to hold the images saction -->
+    <section class="js-mynews hidden mx-[174px] mt-[24px] space-y-6">
+      <!-- search agent news -->
+      <div class="flex bg-[#e8e8e8] p-4 rounded-lg h-[150px]">
+        <img
+          src="../assets/images/MicrosoftTeams-image (26) 1.jpg"
+          alt=""
+          class="mr-4 rounded-md"
+        />
+        <div>
+          <h4 class="mb-1">The Expact job search solution</h4>
+          <h6 class="mb-2">Oct 2024 - Nov 2024</h6>
+          <p>
+            Due to the language barrier in the netherlands which has made it
+            hard for a lot of exoact to find job in a foreign land like the
+            netherlands, kola has enback on the journey to build serach agent, a
+            way to ease the job search for expacts.
+          </p>
+        </div>
+      </div>
+
+      <!-- mdt news -->
+      <div class="flex bg-[#e8e8e8] p-4 rounded-lg h-[150px]">
+        <img
+          src="../assets/images/MicrosoftTeams-image (26) 1.jpg"
+          alt=""
+          class="mr-4 rounded-md"
+        />
+        <div>
+          <h4 class="mb-1">A new journey into the Medical Industry</h4>
+          <h6 class="mb-2">Nov 2023 - Apr 2024</h6>
+          <p>
+            Kola has signed a 6 month contract to work for the Technology of
+            Healthcare Research Group, he will be collaborating with two music
+            therapist to optimize the MDT a piano instuemnrt for People with
+            dementia
+          </p>
+        </div>
+      </div>
+    </section>
 
     <!-- footer starts  -->
     <footer class="p-4 mt-24 bg-[#0a0a0a] text-[#e8e8e8] flex justify-between">
