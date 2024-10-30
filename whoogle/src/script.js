@@ -25,6 +25,7 @@ function myNews() {
   const maincontent = document.querySelectorAll(".js-forNews");
   const about = document.querySelector(".js-aboutsection");
   const myNews = document.querySelector(".js-mynews");
+  const contentHolder = document.querySelector(".js-main");
 
   profile.classList.add("hidden");
   about.classList.add("hidden");
@@ -34,6 +35,7 @@ function myNews() {
   });
 
   myNews.classList.remove("hidden");
+  contentHolder.classList.remove("border-r-2", "border-r-[#e8e8e8]");
 }
 
 const modals = document.querySelectorAll(".modal");

@@ -14,20 +14,28 @@
   </head>
   <body class="bg-[#FAF9F6] font-sans">
     <!-- header starts here -->
-    <header class="flex items-center justify-between h-11 mx-5 mt-10 mb-[52px]">
-      <div class="flex h-11">
-        <img src="../assets/logo/logo.svg" alt="lookup logo" />
-        <div
-          class="bg-[#E8E8E8] px-10 py-4 rounded-full w-[764px] ml-[31px] flex items-center text-[#0A0A0A]"
-        >
-          Sanyaolu Kolawole
+    <header class="min-h-11 px-5 pt-10 pb-[52px]">
+      <div class="hdrContainer flex flex-col flex-wrap space-x-7 sm:flex-row">
+        <div>
+          <img src="../assets/logo/logo.svg" alt="lookup logo" />
+        </div>
+        <div class="flex-1">
+          <input
+            type="text"
+            value="Sanyaolu Kolawole"
+            class="border-[#E8E8E8] border-2 bg-[#faf9f6] px-3 py-2 bg-none max-w-[764px] w-full rounded-full"
+            readonly
+            name="search"
+          />
+        </div>
+        <div>
+          <img
+            src="../assets/images/profile.jpg"
+            alt="profile picture"
+            class="flex justify-end size-10 rounded-full"
+          />
         </div>
       </div>
-      <img
-        src="../assets/images/profile.jpg"
-        alt="profile picture"
-        class="flex justify-end size-10 rounded-full"
-      />
     </header>
 
     <!-- nav starts here -->
@@ -81,8 +89,10 @@
             ></span>
           </a>
         </li>
-        <!-- cv -->
-        <li class="relative flex justify-end items-center ml-[270px] group">
+        <!-- cv uses media queries -->
+        <li
+          class="relative flex justify-end items-center lg:ml-[270px] ml-[50px] group"
+        >
           <a href="../assets/My resume.pdf" download class="pb-1"
             >Download CV
           </a>
@@ -264,11 +274,9 @@
     <!-- main contennt starts here -->
     <div class="mx-[174px] mt-[24px] flex js-maincontent">
       <!-- experience post -->
-      <section
-        class="flex flex-col border-r-2 border-r-[#e8e8e8] w-full js-main"
-      >
+      <section class="flex flex-col w-full js-main max-w-[500px] mr-28">
         <!-- Rediones start -->
-        <div class="flex flex-col mb-[36px] w-[500px] pm js-forNews">
+        <div class="flex flex-col mb-[36px] pm js-forNews">
           <div class="flex">
             <img
               src="../assets/logo/rediones-color.svg"
@@ -351,7 +359,7 @@
         </div>
 
         <!-- search agarnt start -->
-        <div class="flex flex-col mb-[36px] w-[500px] webdev pm js-forNews">
+        <div class="flex flex-col mb-[36px] webdev pm js-forNews">
           <div class="flex">
             <img
               src="../assets/logo/searchagent.svg"
@@ -446,7 +454,7 @@
         </div>
 
         <!-- mdt starts -->
-        <div class="flex flex-col mb-[36px] w-[500px] ide js-forNews">
+        <div class="flex flex-col mb-[36px] ide js-forNews">
           <div class="flex">
             <img
               src="../assets/logo/thaus-color.svg"
@@ -524,7 +532,7 @@
         </div>
 
         <!-- Formula Cruiser -->
-        <div class="flex flex-col mb-[36px] w-[500px] ide js-forNews">
+        <div class="flex flex-col mb-[36px] ide js-forNews">
           <div class="flex">
             <img
               src="../assets/logo/fc-color.svg"
@@ -616,7 +624,7 @@
         </div>
 
         <!-- People also ask starts  -->
-        <section class="mb-[52px] w-[500px] js-faq js-forNews">
+        <section class="mb-[52px] js-faq js-forNews">
           <h2 class="pb-[24px] border-b-2 border-b-[#0a0a0a]">
             People also ask
           </h2>
@@ -624,7 +632,7 @@
         </section>
 
         <!-- HU4 -->
-        <div class="flex flex-col mb-[36px] w-[500px] ide js-forNews">
+        <div class="flex flex-col mb-[36px] ide js-forNews">
           <div class="flex">
             <img
               src="../assets/logo/fc-color.svg"
@@ -692,7 +700,7 @@
         </div>
 
         <!-- Waag -->
-        <div class="flex flex-col mb-[36px] w-[500px] ide js-forNews">
+        <div class="flex flex-col mb-[36px] ide js-forNews">
           <div class="flex">
             <img
               src="../assets/logo/waag.svg"
@@ -767,7 +775,7 @@
         </div>
 
         <!-- Wildwest -->
-        <div class="flex flex-col mb-[36px] w-[500px] pm js-forNews">
+        <div class="flex flex-col mb-[36px] pm js-forNews">
           <div class="flex">
             <img
               src="../assets/logo/wildwest.svg"
@@ -849,7 +857,7 @@
         </div>
 
         <!-- Ahrend -->
-        <div class="flex flex-col mb-[36px] w-[500px] ide js-forNews">
+        <div class="flex flex-col mb-[36px] ide js-forNews">
           <div class="flex">
             <img
               src="../assets/logo/ahrend-color.svg"
@@ -916,30 +924,28 @@
         </div>
 
         <!-- this section was created to hold the news section -->
-        <section class="js-mynews hidden w-[500px] mt-[24px] space-y-6">
+        <section class="js-mynews hidden mt-[24px] space-y-6">
           <!-- search agent news -->
-          <div class="flex p-4 border-2 border-black">
+          <div class="flex p-4 items-center justify-center space-x-6">
             <div>
-              <h4 class="mb-1">The Expact job search solution</h4>
+              <h4 class="mb-1">The expact job search solution</h4>
               <p>
-                Due to the language barrier in the netherlands which has made it
-                hard for a lot of exoact to find job in a foreign land like the
-                netherlands, kola has enback on the journey to build serach
-                agent, a way to ease the job search for expacts.
+                Kola has enback on the journey to build serach agent, a way to
+                ease the job search for expacts.
               </p>
               <h6 class="mt-2">Oct 2024</h6>
             </div>
             <img
               src="../assets/images/MicrosoftTeams-image (26) 1.jpg"
               alt=""
-              class="mr-4 rounded-md"
+              class="rounded-md w-[100px] h-[100px]"
             />
           </div>
         </section>
 
         <!-- end of scetion-->
         <div
-          class="flex flex-col justify-center items-center w-[500px] mt-[50px] js-longLogo"
+          class="flex flex-col justify-center items-center mt-[50px] js-longLogo"
         >
           <h5>
             Some results may have been removed under data protection law in
@@ -949,8 +955,10 @@
         </div>
       </section>
 
-      <!-- about me and expereience starts here -->
-      <section class="ml-[32px] w-[750px] js-aboutsection">
+      <!-- about me and expereience starts here (is now hidden for responsiveness) -->
+      <section
+        class="max-w-[750px] js-aboutsection border-l-2 border-l-[#e8e8e8] p-5 max-h-fit hidden"
+      >
         <!-- about me section -->
         <section class="mb-[36px]">
           <h3 class="mt-[23px] mb-[25px]">About</h3>
