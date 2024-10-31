@@ -105,14 +105,14 @@
     <!-- profile section starts here -->
     <section class="px-[15px] mt-[24px] js-profile xl:px-[174px]">
       <!-- roles nav starts here -->
-      <header class="flex items-center">
+      <header class="flex items-center mb-[36px] lg:mb-0">
         <div>
           <h1>Sanyaolu Kolawole</h1>
           <h5>Project Manager, ID Engineer and Web Developer</h5>
         </div>
         <!-- filter btn starts here -->
         <div
-          class="flex space-x-[20px] justify-between items-center h-[42px] ml-[28px]"
+          class="flex flex-wrap space-x-[20px] justify-between items-center min-h-[42px] ml-[28px]"
         >
           <a
             class="filter-btn rounded-full bg-[#e8e8e8] px-3 py-2 cursor-pointer"
@@ -124,7 +124,8 @@
             class="filter-btn rounded-full bg-[#e8e8e8] px-3 py-2 cursor-pointer"
             data-filter="ide"
           >
-            Industrial Design Engineer
+            <span class="block lg:hidden">IDE</span>
+            <span class="hidden lg:block">Industrial Design Engineer</span>
           </a>
           <a
             class="filter-btn rounded-full bg-[#e8e8e8] px-3 py-2 cursor-pointer"
@@ -136,9 +137,11 @@
       </header>
 
       <!-- image and contact section -->
-      <section class="mt-[24px] flex w-full mb-[50px] js-aboutMe">
+      <section
+        class="mt-[24px] flex flex-col w-full mb-[50px] js-aboutMe lg:flex-row"
+      >
         <!-- image saction starts here -->
-        <section class="flex h-[250px] space-x-1 w-full">
+        <section class="flex h-[250px] space-x-1 w-full mb-4 lg:mb-0">
           <img
             src="../assets/images/main.jpg"
             alt=""
@@ -160,7 +163,7 @@
 
         <!-- contact section starts here -->
         <section
-          class="grid grid-cols-[195px_1fr_auto] grid-rows-2 w-full ml-[14px] gap-3"
+          class="grid grid-cols-[195px_1fr_auto] grid-rows-2 gap-3 w-full lg:ml-[14px]"
         >
           <!-- contact starts -->
           <div
@@ -274,11 +277,32 @@
     </section>
 
     <!-- main contennt starts here -->
-    <div class="px-[15px] mt-[24px] flex js-maincontent xl:mx-[174px]">
+    <div class="px-[15px] flex js-maincontent xl:mx-[174px] lg:mt-[24px]">
       <!-- experience post -->
       <section
-        class="flex flex-col w-full js-main max-w-[750px] pr-16 xl:pr-28"
+        class="flex flex-col w-full js-main xl:pr-28 lg:max-w-[750px] lg:pr-16"
       >
+        <!-- about me section for smaller screen -->
+        <section class="mb-[36px] lg:hidden js-smallAbout">
+          <h3 class="mb-3 lg:mb-[25px]">About</h3>
+          <p class="mb-2">
+            Kolawole, also known as Kola, is a product designer, project
+            manager, and front-end developer. He has experience working with
+            multidisciplinary teams and always aims maintains a user-centric
+            focus.
+          </p>
+          <p>
+            Born: November 23, 2000
+            <a
+              href="https://www.google.com/maps/place/Abeokuta,+Ogun+State,+Nigeria/@7.167355,3.277574,12z/data=!3m1!4b1!4m6!3m5!1s0x103a4bf6995dfc7f:0x6734fcf62892478d!8m2!3d7.147502!4d3.3619356!16zL20vMDEwZHI?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D"
+              class="text-[#1036FF]"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Abeokuta, Nigeria</a
+            >
+          </p>
+        </section>
+
         <!-- Rediones start -->
         <div class="flex flex-col mb-[36px] pm js-forNews">
           <div class="flex">
@@ -949,7 +973,7 @@
 
         <!-- end of scetion-->
         <div
-          class="flex flex-col justify-center items-center text-center mt-[50px] js-longLogo te"
+          class="flex flex-col justify-center items-center text-center mt-[50px] js-longLogo"
         >
           <h5>
             Some results may have been removed under data protection law in
@@ -961,11 +985,11 @@
 
       <!-- about me and expereience starts here (is now hidden for responsiveness) -->
       <section
-        class="max-w-[500px] js-aboutsection border-l-2 border-l-[#e8e8e8] p-5"
+        class="max-w-[500px] js-aboutsection border-l-2 border-l-[#e8e8e8] p-5 hidden lg:block"
       >
         <!-- about me section -->
         <section class="mb-[36px]">
-          <h3 class="mt-[23px] mb-[25px]">About</h3>
+          <h3 class="mb-[25px]">About</h3>
           <p>
             Kolawole, also known as Kola, is a product designer, project
             manager, and front-end developer. He has experience working with

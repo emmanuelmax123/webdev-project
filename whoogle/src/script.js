@@ -26,7 +26,9 @@ function myNews() {
   const about = document.querySelector(".js-aboutsection");
   const myNews = document.querySelector(".js-mynews");
   const contentHolder = document.querySelector(".js-main");
+  const smallAbout = document.querySelector(".js-smallAbout");
 
+  smallAbout.classList.add("hidden");
   profile.classList.add("hidden");
   about.classList.add("hidden");
 
@@ -58,6 +60,7 @@ const filterBtn = document.querySelectorAll(".filter-btn");
 const sections = document.querySelectorAll(".ide, .pm, .webdev");
 const aboutMe = document.querySelector(".js-aboutMe");
 const longlogo = document.querySelector(".js-longLogo");
+const smallAbout = document.querySelector(".js-smallAbout");
 
 filterBtn.forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -76,9 +79,11 @@ filterBtn.forEach((btn) => {
       });
       aboutMe.classList.remove("hidden");
       longlogo.classList.remove("hidden");
+      smallAbout.classList.remove("hidden");
     } else {
       aboutMe.classList.add("hidden");
       longlogo.classList.add("hidden");
+      smallAbout.classList.add("hidden");
 
       // show filter section
       sections.forEach((section) => {
