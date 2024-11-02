@@ -112,7 +112,7 @@
         </div>
         <!-- filter btn starts here -->
         <div
-          class="flex-wrap justify-between hidden items-center ml-[5px] min-h-[42px] sm:flex md:ml-[28px] md:space-x-[20px]"
+          class="flex-grow flex-wrap justify-between hidden items-center ml-[5px] min-h-[42px] sm:flex md:ml-[28px] md:space-x-[20px]"
         >
           <a
             class="filter-btn rounded-full bg-[#e8e8e8] px-3 py-2 cursor-pointer mr-[2px] mb-[8px] md:mr-0 md:mb-0"
@@ -124,8 +124,8 @@
             class="filter-btn rounded-full bg-[#e8e8e8] px-3 py-2 cursor-pointer"
             data-filter="ide"
           >
-            <span class="block lg:hidden">IDE</span>
-            <span class="hidden lg:block">Industrial Design Engineer</span>
+            <span class="block lg-fit:hidden">IDE</span>
+            <span class="hidden lg-fit:block">Industrial Design Engineer</span>
           </a>
           <a
             class="filter-btn rounded-full bg-[#e8e8e8] px-3 py-2 cursor-pointer"
@@ -151,6 +151,9 @@
           data-filter="ide"
         >
           <span class="block sm:hidden">IDE</span>
+          <span class="block max-sm-fit:hidden"
+            >Industrial Design Engineer</span
+          >
         </a>
         <a
           class="filter-btn rounded-full bg-[#e8e8e8] px-3 py-2 cursor-pointer"
@@ -171,18 +174,18 @@
           <img
             src="../assets/images/main.jpg"
             alt=""
-            class="rounded-l-3xl max-w-[200px] md:max-w-none"
+            class="rounded-l-3xl w-[55%] object-cover"
           />
-          <div class="flex flex-col space-y-1 h-full border-2 border-black">
+          <div class="flex flex-col space-y-1 h-full w-[45%]">
             <img
               src="../assets/images/main1.jpg"
               alt=""
-              class="w-[271px] h-1/2 rounded-tr-2xl"
+              class="h-1/2 rounded-tr-2xl object-cover"
             />
             <img
               src="../assets/images/main2.jpg"
               alt=""
-              class="w-[271px] h-1/2 rounded-br-2xl"
+              class="h-1/2 rounded-br-2xl object-cover"
             />
           </div>
         </section>
@@ -229,7 +232,10 @@
                   href="https://pietervanforeest.nl/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  ><img src="../assets/logo/pvf.svg" alt=""
+                  ><img
+                    src="../assets/logo/pvf.svg"
+                    alt=""
+                    class="hidden xs-higher:block"
                 /></a>
 
                 <a
@@ -243,7 +249,10 @@
                   href="https://theformulacruisers.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  ><img src="../assets/logo/fc.svg" alt=""
+                  ><img
+                    src="../assets/logo/fc.svg"
+                    alt=""
+                    class="hidden xs-higher:block"
                 /></a>
 
                 <a
@@ -273,7 +282,8 @@
                 </div>
                 <div class="flex flex-col items-center">
                   <img src="../assets/logo/tailwind-css-fill.svg" alt="" />
-                  <h5 class="font-bold">Tailwind Css</h5>
+                  <h5 class="font-bold block xs-higher:hidden">Tailwind</h5>
+                  <h5 class="font-bold hidden xs-higher:block">Tailwind Css</h5>
                 </div>
                 <div class="flex flex-col items-center">
                   <img src="../assets/logo/javascript-fill.svg" alt="" />
@@ -356,7 +366,7 @@
 
           <!-- dialog starts here -->
           <dialog
-            class="max-w-[1000px] p-5 flex-col bg-[#faf9f6] rounded-2xl outline-none text-[#0a0a0a] modal"
+            class="p-5 flex-col bg-[#faf9f6] rounded-2xl outline-none text-[#0a0a0a] modal max-md:max-w-[90%] lg:max-w-[1000px]"
           >
             <!-- cancel icon starts here -->
             <div
@@ -366,7 +376,7 @@
             </div>
 
             <!-- hero image + info starts here -->
-            <div class="flex w-full">
+            <div class="flex w-full max-md:flex-col">
               <img
                 src="../assets/images/rediones landing page.svg"
                 alt=""
@@ -375,8 +385,8 @@
               <div class="space-y-5 flex flex-col justify-center mr-[25px]">
                 <!-- aboust starts here -->
                 <div class="flex items-start">
-                  <h3 class="w-[5rem] mr-5">About</h3>
-                  <p>
+                  <h3 class="w-1/5">About</h3>
+                  <p class="w-4/5">
                     At Rediones, we're all about bringing scholars together from
                     every corner of the world. Our platform creates an inclusive
                     and diverse community where sharing ideas, working on
@@ -387,25 +397,18 @@
 
                 <!-- role starts here -->
                 <div class="flex items-center">
-                  <h3 class="w-[63px] mr-5">Role</h3>
-                  <p>Project Manager & Founder</p>
+                  <h3 class="w-1/5">Role</h3>
+                  <p class="w-4/5">Project Manager & Founder</p>
                 </div>
 
                 <!-- tech stack -->
                 <div class="flex items-center">
-                  <h3 class="w-[63px] mr-5">Stack</h3>
-
-                  <img
-                    src="../assets/logo/file-excel-2-fill.svg"
-                    alt=""
-                    class="mr-5"
-                  />
-                  <img
-                    src="../assets/logo/file-word-2-fill.svg"
-                    alt=""
-                    class="mr-5"
-                  />
-                  <img src="../assets/logo/notion-fill.svg" alt="" />
+                  <h3 class="w-1/5">Stack</h3>
+                  <div class="w-4/5 space-x-2 flex">
+                    <img src="../assets/logo/file-excel-2-fill.svg" alt="" />
+                    <img src="../assets/logo/file-word-2-fill.svg" alt="" />
+                    <img src="../assets/logo/notion-fill.svg" alt="" />
+                  </div>
                 </div>
               </div>
             </div>
@@ -438,7 +441,7 @@
 
           <!-- dialog starts here -->
           <dialog
-            class="max-w-[1000px] p-5 flex-col bg-[#faf9f6] rounded-2xl outline-none text-[#0a0a0a] modal"
+            class="p-5 flex-col bg-[#faf9f6] rounded-2xl outline-none text-[#0a0a0a] modal max-md:max-w-[90%] lg:max-w-[1000px]"
           >
             <!-- cancel icon starts here -->
             <div
@@ -448,17 +451,17 @@
             </div>
 
             <!-- hero image + info starts here -->
-            <div class="flex w-full">
+            <div class="flex w-full max-md:flex-col">
               <img
                 src="../assets/images/searchagent.jpg"
                 alt=""
-                class="w-[498px] h-[256px] mr-5 rounded-xl border-2 border-[#e8e8e8]"
+                class="w-[498px] h-[256px] mr-5 rounded-xl border-2 border-[#e8e8e8] max-sm:object-contain max-md:w-full max-md:mb-4"
               />
               <div class="space-y-5 flex flex-col justify-center mr-[25px]">
                 <!-- aboust starts here -->
                 <div class="flex items-start">
-                  <h3 class="w-[5rem] mr-5">About</h3>
-                  <p>
+                  <h3 class="w-1/5">About</h3>
+                  <p class="w-4/5">
                     Finding a job as an expat can be challenging, especially
                     when you're still learning the local language. That's why I
                     decided to build Search Agent—a web scraping platform that
@@ -468,31 +471,24 @@
 
                 <!-- role starts here -->
                 <div class="flex items-center">
-                  <h3 class="w-[63px] mr-5">Role</h3>
-                  <p>Full Stack Developer</p>
+                  <h3 class="w-1/5">Role</h3>
+                  <p class="w-4/5">Full Stack Developer</p>
                 </div>
 
                 <!-- tech stack -->
                 <div class="flex items-center">
-                  <h3 class="w-[63px] mr-5">Stack</h3>
-
-                  <img
-                    src="../assets/logo/html5-fill.svg"
-                    alt=""
-                    class="mr-5"
-                  />
-                  <img
-                    src="../assets/logo/tailwind-css-fill.svg"
-                    alt=""
-                    class="mr-5"
-                  />
-                  <img src="../assets/logo/javascript-fill.svg" alt="" />
+                  <h3 class="w-1/5">Stack</h3>
+                  <div class="w-4/5 space-x-2 flex">
+                    <img src="../assets/logo/html5-fill.svg" alt="" />
+                    <img src="../assets/logo/tailwind-css-fill.svg" alt="" />
+                    <img src="../assets/logo/javascript-fill.svg" alt="" />
+                  </div>
                 </div>
 
                 <!-- view code -->
                 <div class="flex items-center">
-                  <h3 class="w-[63px] mr-5">Code</h3>
-                  <button>
+                  <h3 class="w-1/5">Code</h3>
+                  <button class="w-4/5 focus:outline-none">
                     <a
                       href="https://github.com/emmanuelmax123/front-end.git"
                       target="_blank"
@@ -537,7 +533,7 @@
 
           <!-- dialog starts here -->
           <dialog
-            class="modal max-w-[1000px] p-5 flex-col bg-[#faf9f6] rounded-2xl outline-none text-[#0a0a0a]"
+            class="p-5 flex-col bg-[#faf9f6] rounded-2xl outline-none text-[#0a0a0a] modal max-md:max-w-[90%] lg:max-w-[1000px]"
           >
             <!-- cancel icon starts here -->
             <div
@@ -547,17 +543,17 @@
             </div>
 
             <!-- hero image + info starts here -->
-            <div class="flex w-full">
+            <div class="flex w-full max-md:flex-col">
               <img
                 src="../assets/images/MDT.png"
                 alt=""
-                class="w-[498px] h-[256px] mr-5 rounded-xl border-2 border-[#e8e8e8]"
+                class="w-[498px] h-[256px] mr-5 rounded-xl border-2 border-[#e8e8e8] max-sm:object-contain max-md:w-full max-md:mb-4"
               />
               <div class="space-y-5 flex flex-col justify-center mr-[25px]">
                 <!-- aboust starts here -->
                 <div class="flex items-start">
-                  <h3 class="w-[5rem] mr-5">About</h3>
-                  <p>
+                  <h3 class="w-1/5">About</h3>
+                  <p class="w-4/5">
                     The project focuses on refining a specialized musical
                     instrument, particularly a piano, designed to cater to
                     individuals with dementia. In this project, I collaborated
@@ -570,15 +566,18 @@
 
                 <!-- role starts here -->
                 <div class="flex items-center">
-                  <h3 class="w-[63px] mr-5">Role</h3>
-                  <p>Industrial Design Engineer and Project Manager</p>
+                  <h3 class="w-1/5">Role</h3>
+                  <p class="w-4/5">
+                    Industrial Design Engineer and Project Manager
+                  </p>
                 </div>
 
                 <!-- tech stack -->
                 <div class="flex items-center">
-                  <h3 class="w-[63px] mr-5">Stack</h3>
-
-                  <img src="../assets/logo/python.svg" alt="" />
+                  <h3 class="w-1/5">Stack</h3>
+                  <div class="w-4/5">
+                    <img src="../assets/logo/python.svg" alt="" />
+                  </div>
                 </div>
               </div>
             </div>
@@ -615,7 +614,7 @@
 
           <!-- dialog starts here -->
           <dialog
-            class="max-w-[1000px] p-5 flex-col bg-[#faf9f6] rounded-2xl outline-none text-[#0a0a0a] modal"
+            class="p-5 flex-col bg-[#faf9f6] rounded-2xl outline-none text-[#0a0a0a] modal max-md:max-w-[90%] lg:max-w-[1000px]"
           >
             <!-- cancel icon starts here -->
             <div
@@ -625,17 +624,17 @@
             </div>
 
             <!-- hero image + info starts here -->
-            <div class="flex w-full">
+            <div class="flex w-full max-md:flex-col">
               <img
                 src="../assets/images/formulacruiser.png"
                 alt=""
-                class="w-[498px] h-[256px] mr-5 rounded-xl border-2 border-[#e8e8e8]"
+                class="w-[498px] h-[256px] mr-5 rounded-xl border-2 border-[#e8e8e8] max-sm:object-contain max-md:w-full max-md:mb-4"
               />
               <div class="space-y-5 flex flex-col justify-center mr-[25px]">
                 <!-- aboust starts here -->
                 <div class="flex items-start">
-                  <h3 class="w-[5rem] mr-5">About</h3>
-                  <p>
+                  <h3 class="w-1/5">About</h3>
+                  <p class="w-4/5">
                     I was tasked with developing visual displays that
                     highlighted potential sponsorship spots on the Formula
                     Cruiser HU-2 race car. I collaborated with the finance
@@ -648,29 +647,22 @@
 
                 <!-- role starts here -->
                 <div class="flex items-center">
-                  <h3 class="w-[63px] mr-5">Role</h3>
-                  <p>Brand Designer</p>
+                  <h3 class="w-1/5">Role</h3>
+                  <p class="w-4/5">Brand Designer</p>
                 </div>
 
                 <!-- tech stack -->
                 <div class="flex items-center">
-                  <h3 class="w-[63px] mr-5">Stack</h3>
-
-                  <img
-                    src="../assets/logo/file-word-2-fill.svg"
-                    alt=""
-                    class="mr-5"
-                  />
-                  <img
-                    src="../assets/logo/blender-fill.svg"
-                    alt=""
-                    class="mr-5"
-                  />
-                  <img
-                    src="../assets/logo/adobe-photoshop-logo-svgrepo-com.svg"
-                    alt=""
-                    class="h-[36px]"
-                  />
+                  <h3 class="w-1/5">Stack</h3>
+                  <div class="w-4/5 flex space-x-2">
+                    <img src="../assets/logo/file-word-2-fill.svg" alt="" />
+                    <img src="../assets/logo/blender-fill.svg" alt="" />
+                    <img
+                      src="../assets/logo/adobe-photoshop-logo-svgrepo-com.svg"
+                      alt=""
+                      class="h-[36px]"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -713,7 +705,7 @@
 
           <!-- dialog starts here -->
           <dialog
-            class="modal max-w-[1000px] p-5 flex-col bg-[#faf9f6] rounded-2xl outline-none text-[#0a0a0a]"
+            class="p-5 flex-col bg-[#faf9f6] rounded-2xl outline-none text-[#0a0a0a] modal max-md:max-w-[90%] lg:max-w-[1000px]"
           >
             <!-- cancel icon starts here -->
             <div
@@ -723,17 +715,17 @@
             </div>
 
             <!-- hero image + info starts here -->
-            <div class="flex w-full">
+            <div class="flex w-full max-md:flex-col">
               <img
                 src="../assets/images/hu4.png"
                 alt=""
-                class="w-[498px] h-[256px] mr-5 rounded-xl border-2 border-[#e8e8e8]"
+                class="w-[498px] h-[256px] mr-5 rounded-xl border-2 border-[#e8e8e8] max-sm:object-contain max-md:w-full max-md:mb-4"
               />
               <div class="space-y-5 flex flex-col justify-center mr-[25px]">
                 <!-- aboust starts here -->
-                <div class="flex items-start">
-                  <h3 class="w-[5rem] mr-5">About</h3>
-                  <p>
+                <div class="flex items-start w-full">
+                  <h3 class="w-1/5">About</h3>
+                  <p class="w-4/5">
                     I collaborated with three other industial designers to
                     design the Formula Cruiser HU-4 electric race-car according
                     to the most recent (2022) FS regulations. The design must be
@@ -745,8 +737,10 @@
 
                 <!-- role starts here -->
                 <div class="flex items-center">
-                  <h3 class="w-[63px] mr-5">Role</h3>
-                  <p>Industrial Design Engineer and Project Manager</p>
+                  <h3 class="w-1/5">Role</h3>
+                  <p class="w-4/5">
+                    Industrial Design Engineer and Project Manager
+                  </p>
                 </div>
               </div>
             </div>
@@ -782,7 +776,7 @@
 
           <!-- dialog starts here -->
           <dialog
-            class="modal max-w-[1000px] p-5 flex-col bg-[#faf9f6] rounded-2xl outline-none text-[#0a0a0a]"
+            class="p-5 flex-col bg-[#faf9f6] rounded-2xl outline-none text-[#0a0a0a] modal max-md:max-w-[90%] lg:max-w-[1000px]"
           >
             <!-- cancel icon starts here -->
             <div
@@ -792,7 +786,7 @@
             </div>
 
             <!-- hero image + info starts here -->
-            <div class="flex w-full">
+            <div class="flex w-full max-md:flex-col">
               <img
                 src="../assets/images/Airbox front.png"
                 alt=""
@@ -801,8 +795,8 @@
               <div class="space-y-5 flex flex-col justify-center mr-[25px]">
                 <!-- aboust starts here -->
                 <div class="flex items-start">
-                  <h3 class="w-[5rem] mr-5">About</h3>
-                  <p>
+                  <h3 class="w-1/5">About</h3>
+                  <p class="w-4/5">
                     Waag sought a creative solution to better visualize their
                     air quality data, aiming to raise greater awareness about
                     the issue. My team and I were tasked with addressing this
@@ -814,14 +808,16 @@
 
                 <!-- role starts here -->
                 <div class="flex items-center">
-                  <h3 class="w-[63px] mr-5">Role</h3>
-                  <p>Industrial Design Engineer</p>
+                  <h3 class="w-1/5">Role</h3>
+                  <p class="w-4/5">Industrial Design Engineer</p>
                 </div>
 
                 <!-- stack starts here -->
                 <div class="flex items-center">
-                  <h3 class="w-[63px] mr-5">Stack</h3>
-                  <img src="../assets/logo/blender-fill.svg" alt="" />
+                  <h3 class="w-1/5">Stack</h3>
+                  <div class="w-4/5">
+                    <img src="../assets/logo/blender-fill.svg" alt="" />
+                  </div>
                 </div>
               </div>
             </div>
@@ -856,7 +852,7 @@
 
           <!-- dialog starts here -->
           <dialog
-            class="modal max-w-[1000px] p-5 flex-col bg-[#faf9f6] rounded-2xl outline-none text-[#0a0a0a]"
+            class="p-5 flex-col bg-[#faf9f6] rounded-2xl outline-none text-[#0a0a0a] modal max-md:max-w-[90%] lg:max-w-[1000px]"
           >
             <!-- cancel icon starts here -->
             <div
@@ -866,7 +862,7 @@
             </div>
 
             <!-- hero image + info starts here -->
-            <div class="flex w-full">
+            <div class="flex w-full max-md:flex-col">
               <img
                 src="../assets/logo/wwstats.svg"
                 alt=""
@@ -875,8 +871,8 @@
               <div class="space-y-5 flex flex-col justify-center mr-[25px]">
                 <!-- aboust starts here -->
                 <div class="flex items-start">
-                  <h3 class="w-[5rem] mr-5">About</h3>
-                  <p>
+                  <h3 class="w-1/5">About</h3>
+                  <p class="w-4/5">
                     A unique experiment to gauge the viability of a
                     non-traditional content strategy using a faceless and
                     voiceless TikTok account. I developed and curated engaging
@@ -891,19 +887,17 @@
 
                 <!-- role starts here -->
                 <div class="flex items-center">
-                  <h3 class="w-[63px] mr-5">Role</h3>
-                  <p>Content Creator and Project Manager</p>
+                  <h3 class="w-1/5">Role</h3>
+                  <p class="w-4/5">Content Creator and Project Manager</p>
                 </div>
 
                 <!-- tech stack -->
                 <div class="flex items-center">
-                  <h3 class="w-[63px] mr-5">Stack</h3>
-                  <img
-                    src="../assets/logo/tiktok-fill.svg"
-                    alt=""
-                    class="mr-5"
-                  />
-                  <img src="../assets/logo/file-excel-2-fill.svg" alt="" />
+                  <h3 class="w-1/5">Stack</h3>
+                  <div class="w-4/5 flex space-x-2">
+                    <img src="../assets/logo/tiktok-fill.svg" alt="" />
+                    <img src="../assets/logo/file-excel-2-fill.svg" alt="" />
+                  </div>
                 </div>
               </div>
             </div>
@@ -938,7 +932,7 @@
 
           <!-- dialog starts here -->
           <dialog
-            class="modal max-w-[1000px] p-5 flex-col bg-[#faf9f6] rounded-2xl outline-none text-[#0a0a0a]"
+            class="p-5 flex-col bg-[#faf9f6] rounded-2xl outline-none text-[#0a0a0a] modal max-md:max-w-[90%] lg:max-w-[1000px]"
           >
             <!-- cancel icon starts here -->
             <div
@@ -948,7 +942,7 @@
             </div>
 
             <!-- hero image + info starts here -->
-            <div class="flex w-full">
+            <div class="flex w-full max-md:flex-col">
               <img
                 src="../assets/images/ahrend.png"
                 alt=""
@@ -957,8 +951,8 @@
               <div class="space-y-5 flex flex-col justify-center mr-[25px]">
                 <!-- aboust starts here -->
                 <div class="flex items-start">
-                  <h3 class="w-[5rem] mr-5">About</h3>
-                  <p>
+                  <h3 class="w-1/5">About</h3>
+                  <p class="w-4/5">
                     Ahrend designer Kees de Boer needed assistance in creating
                     office furniture that would encourage employees to return to
                     the workplace. Together with my team, we developed a desk
@@ -969,8 +963,8 @@
 
                 <!-- role starts here -->
                 <div class="flex items-center">
-                  <h3 class="w-[63px] mr-5">Role</h3>
-                  <p>Industrial Design Engineer</p>
+                  <h3 class="w-1/5">Role</h3>
+                  <p class="w-4/5">Industrial Design Engineer</p>
                 </div>
               </div>
             </div>
