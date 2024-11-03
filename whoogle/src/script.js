@@ -66,6 +66,7 @@ filterBtn.forEach((btn) => {
   btn.addEventListener("click", () => {
     const filter = btn.getAttribute("data-filter");
     const active = btn.classList.contains("active");
+    const work = document.querySelector(".js-work");
 
     // remove active class
     filterBtn.forEach((btn) => {
@@ -77,9 +78,14 @@ filterBtn.forEach((btn) => {
       sections.forEach((section) => {
         section.classList.remove("hidden");
       });
-      aboutMe.classList.remove("hidden");
-      longlogo.classList.remove("hidden");
-      smallAbout.classList.remove("hidden");
+      if (work.classList.contains("work")) {
+        longlogo.classList.remove("hidden");
+        smallAbout.classList.remove("hidden");
+      } else {
+        aboutMe.classList.remove("hidden");
+        longlogo.classList.remove("hidden");
+        smallAbout.classList.remove("hidden");
+      }
     } else {
       aboutMe.classList.add("hidden");
       longlogo.classList.add("hidden");
@@ -152,16 +158,19 @@ function runProjects() {
   const maincontent = document.querySelector(".js-maincontent");
   const image = document.querySelector(".js-imgSection");
   const longlogo = document.querySelector(".js-longLogo");
+  const work = document.querySelector(".js-work");
 
   image.classList.add("hidden");
+  work.classList.add("work");
   profile.classList.remove("hidden");
   maincontent.classList.remove("hidden");
-
   longlogo.classList.add("hidden");
   aboutsection.classList.add("hidden");
+  aboutsection.classList.remove("lg:block");
   faq.classList.add("hidden");
   aboutMe.classList.add("hidden");
   mainLine.classList.remove("border-r-2", "border-r-[#e8e8e8]");
+
   console.log("works");
 }
 

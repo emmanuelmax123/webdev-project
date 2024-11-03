@@ -19,7 +19,9 @@
         class="hdrContainer flex flex-col flex-wrap space-x-0 sm:space-x-7 sm:flex-row gap-4"
       >
         <div class="sm:mb-0 flex justify-center">
-          <img src="../assets/logo/logo.svg" alt="lookup logo" class="block" />
+          <a href=""
+            ><img src="../assets/logo/logo.svg" alt="lookup logo" class="block"
+          /></a>
         </div>
         <div class="flex-1">
           <input
@@ -67,11 +69,11 @@
           </a>
         </li>
 
-        <!-- projects -->
+        <!-- work -->
         <li
-          class="relative flex justify-center items-center mr-[25px] sm:mr-[50px] group cursor-pointer js-nav"
+          class="relative flex justify-center items-center mr-[25px] sm:mr-[50px] group cursor-pointer js-nav open"
         >
-          <a class="pb-1" onclick="runProjects()"
+          <a class="pb-1 js-work" onclick="runProjects()"
             >Work
             <span
               class="rounded-t-sm border-2 border-[#0a0a0a] absolute mt-[26px] left-0 right-0 opacity-0 js-navline"
@@ -112,7 +114,7 @@
         </div>
         <!-- filter btn starts here -->
         <div
-          class="flex-grow flex-wrap justify-between hidden items-center ml-[5px] min-h-[42px] sm:flex md:ml-[28px] md:space-x-[20px]"
+          class="flex-grow flex-wrap hidden items-center ml-[5px] min-h-[42px] sm:flex md:ml-[28px] md:space-x-[20px]"
         >
           <a
             class="filter-btn rounded-full bg-[#e8e8e8] px-3 py-2 cursor-pointer mr-[2px] mb-[8px] md:mr-0 md:mb-0"
@@ -340,7 +342,7 @@
         </section>
 
         <!-- Rediones start -->
-        <div class="flex flex-col mb-[36px] pm js-forNews">
+        <div class="flex flex-col mb-[16px] pm js-forNews">
           <div class="flex">
             <img
               src="../assets/logo/rediones-color.svg"
