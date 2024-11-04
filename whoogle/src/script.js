@@ -30,6 +30,7 @@ function myNews() {
 
   smallAbout.classList.add("hidden");
   profile.classList.add("hidden");
+  about.classList.remove("lg:block");
   about.classList.add("hidden");
 
   maincontent.forEach((element) => {
@@ -61,6 +62,7 @@ const sections = document.querySelectorAll(".ide, .pm, .webdev");
 const aboutMe = document.querySelector(".js-aboutMe");
 const longlogo = document.querySelector(".js-longLogo");
 const smallAbout = document.querySelector(".js-smallAbout");
+const newsSect = document.querySelector(".js-mynews");
 
 filterBtn.forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -78,7 +80,9 @@ filterBtn.forEach((btn) => {
       sections.forEach((section) => {
         section.classList.remove("hidden");
       });
+      // filter for the work section
       if (work.classList.contains("work")) {
+        newsSect.classList.add("hidden");
         longlogo.classList.remove("hidden");
         smallAbout.classList.remove("hidden");
       } else {
@@ -159,7 +163,11 @@ function runProjects() {
   const image = document.querySelector(".js-imgSection");
   const longlogo = document.querySelector(".js-longLogo");
   const work = document.querySelector(".js-work");
+  const contentholder = document.querySelectorAll(".js-forNews");
 
+  contentholder.forEach((element) => {
+    element.classList.remove("hidden");
+  });
   image.classList.add("hidden");
   work.classList.add("work");
   profile.classList.remove("hidden");
