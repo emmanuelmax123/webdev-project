@@ -201,7 +201,7 @@ if (document.querySelector(".js-jobs")) {
 // Generate job details
 function generateJobDetailCard(job) {
   return `
-    <div class="border-black border-2 w-[950px] rounded-lg px-[36px] py-[36px]">
+    <div class="border-black border-2 w-[950px] rounded-2xl px-[36px] py-[36px]">
 
       <div class="flex justify-between items-center mb-[14px]">
         <img src="${job.logo}" alt="" class="w-[115px]" />
