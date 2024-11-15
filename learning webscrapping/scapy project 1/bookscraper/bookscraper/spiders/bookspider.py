@@ -1,4 +1,5 @@
 import scrapy
+import random
 from bookscraper.items import BookItem
 
 class BookspiderSpider(scrapy.Spider):
@@ -14,7 +15,7 @@ class BookspiderSpider(scrapy.Spider):
                 book_url = "https://books.toscrape.com/" + relative_url
             else:
                 book_url = "https://books.toscrape.com/catalogue/" + relative_url
-            #we follow(go into the book url take the response and parse the info to the parse book page fuction)    
+            #we follow(go into the book url take the response and parse the info to the parse book page fuction, we are also using random user agent)    
             yield response.follow(book_url, callback= self.parse_book_page)
 
         next_page =  response.css('li.next a ::attr(href)').get()
