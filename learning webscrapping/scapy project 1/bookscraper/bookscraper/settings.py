@@ -21,6 +21,13 @@ SCRAPEOPS_API_KEY = 'd4e1331e-fd1b-42ad-a4f6-abf70bc15434'
 SCRAPEOPS_NUM_RESULTS = 30
 
 
+#Rotating Proxies
+ROTATONG_PROXIE_LIST = [
+ '145.40.97.148:10001',
+ '145.40.97.148:10003',
+]
+
+
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = "bookscraper (+http://www.yourdomain.com)"
 
@@ -61,6 +68,10 @@ ROBOTSTXT_OBEY = False
 DOWNLOADER_MIDDLEWARES = {
   #  "bookscraper.middlewares.BookscraperDownloaderMiddleware": 543,
    "bookscraper.middlewares.ScrapeOpsFakeBrowserHeaderAgentMiddleware": 400,
+   "rotating_proxies.middlewares.RotatingProxyMiddleware":610,
+   "rotating_proxies.middlewares.BanDetectionMiddleware":620,
+
+
 }
 
 # Enable or disable extensions
@@ -72,8 +83,8 @@ DOWNLOADER_MIDDLEWARES = {
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   "bookscraper.pipelines.BookscraperPipeline": 300,
-  #  "bookscraper.pipelines.saveToMySqlPipeline": 400,
+  #"bookscraper.pipelines.BookscraperPipeline": 300,
+  #"bookscraper.pipelines.saveToMySqlPipeline": 400,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
