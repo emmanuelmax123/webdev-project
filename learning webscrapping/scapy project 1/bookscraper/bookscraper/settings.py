@@ -22,9 +22,10 @@ SCRAPEOPS_NUM_RESULTS = 30
 
 
 #Rotating Proxies
-ROTATONG_PROXIE_LIST = [
- '145.40.97.148:10001',
- '145.40.97.148:10003',
+ROTATING_PROXY_LIST = [
+ '213.19.205.18:54321',
+#  '109.236.83.153:8888',
+#  '45.88.3.144:80',
 ]
 
 
@@ -68,10 +69,6 @@ ROBOTSTXT_OBEY = False
 DOWNLOADER_MIDDLEWARES = {
   #  "bookscraper.middlewares.BookscraperDownloaderMiddleware": 543,
    "bookscraper.middlewares.ScrapeOpsFakeBrowserHeaderAgentMiddleware": 400,
-   "rotating_proxies.middlewares.RotatingProxyMiddleware":610,
-   "rotating_proxies.middlewares.BanDetectionMiddleware":620,
-
-
 }
 
 # Enable or disable extensions
