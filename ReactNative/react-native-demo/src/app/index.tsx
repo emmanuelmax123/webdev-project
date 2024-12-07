@@ -13,6 +13,9 @@ import Imagescomp from "../componenets/imagescomp";
 import Profilecomp from "../componenets/Profilecomp";
 import DynamicContent from "../componenets/DynamicContent";
 import DynamicContent2 from "../componenets/DynamicContent2";
+import Inlinestyling from "../componenets/inlinestyling";
+import Interalstyling from "../componenets/interalstyling";
+import Externalstyle from "../componenets/Externalstyle";
 
 const Hello = () => {
   return (
@@ -27,9 +30,13 @@ const Hello = () => {
       <Viewcomponet />
       <Buttoncomp /> 
       <Imagescomp />
-      <Profilecomp />*/}
+      <Profilecomp />
       <DynamicContent />
-      <DynamicContent2 />
+      <DynamicContent2 />*/}
+
+      <Inlinestyling />
+      <Interalstyling />
+      <Externalstyle />
     </View>
   );
 };
