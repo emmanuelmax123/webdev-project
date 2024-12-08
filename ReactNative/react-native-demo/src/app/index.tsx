@@ -1,21 +1,21 @@
 import { View, Text } from "react-native";
 import React from "react";
-import Componet from "../componenets/Componet";
-import Greet from "../componenets/Greet";
-import Name from "../componenets/Name";
-import Age from "../componenets/Age";
-import Social from "../componenets/Social";
-import Subjectname from "../componenets/Subjectname";
-import Textcom from "../componenets/TextComponent";
-import Viewcomponet from "../componenets/Viewcomponet";
-import Buttoncomp from "../componenets/Buttoncomp";
-import Imagescomp from "../componenets/imagescomp";
-import Profilecomp from "../componenets/Profilecomp";
-import DynamicContent from "../componenets/DynamicContent";
-import DynamicContent2 from "../componenets/DynamicContent2";
-import Inlinestyling from "../componenets/inlinestyling";
-import Interalstyling from "../componenets/interalstyling";
-import Externalstyle from "../componenets/Externalstyle";
+import Componet from "../components/Componet";
+import Greet from "../components/Greet";
+import Name from "../components/Name";
+import Age from "../components/Age";
+import Social from "../components/Social";
+import Subjectname from "../components/Subjectname";
+import Textcom from "../components/TextComponent";
+import Viewcomponet from "../components/Viewcomponet";
+import Buttoncomp from "../components/Buttoncomp";
+import Imagescomp from "../components/imagescomp";
+import Profilecomp from "../components/Profilecomp";
+import DynamicContent from "../components/DynamicContent";
+import DynamicContent2 from "../components/DynamicContent2";
+import Inlinestyling from "../components/inlinestyling";
+import Interalstyling from "../components/interalstyling";
+import Externalstyle from "../components/Externalstyle";
 
 const Hello = () => {
   return (
@@ -27,13 +27,13 @@ const Hello = () => {
       <Social />
       <Subjectname />
       <Textcom />
-      <Viewcomponet />
+      
       <Buttoncomp /> 
       <Imagescomp />
       <Profilecomp />
       <DynamicContent />
       <DynamicContent2 />*/}
-
+      <Viewcomponet />
       <Inlinestyling />
       <Interalstyling />
       <Externalstyle />
