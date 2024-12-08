@@ -16,6 +16,9 @@ import DynamicContent2 from "../components/DynamicContent2";
 import Inlinestyling from "../components/inlinestyling";
 import Interalstyling from "../components/interalstyling";
 import Externalstyle from "../components/Externalstyle";
+import NameComp from "../components/NameComponent";
+import Xhandlecomp from "../components/Xhandlecomp";
+import Imagecomp from "../components/Imagecomp";
 
 const Hello = () => {
   return (
@@ -27,16 +30,20 @@ const Hello = () => {
       <Social />
       <Subjectname />
       <Textcom />
-      <Viewcomponet />
+      
       <Buttoncomp /> 
       <Imagescomp />
       <Profilecomp />
       <DynamicContent />
-      <DynamicContent2 />*/}
-
+      <DynamicContent2 />
       <Inlinestyling />
       <Interalstyling />
-      <Externalstyle />
+      <Externalstyle />*/}
+
+      <Viewcomponet />
+      <NameComp />
+      <Xhandlecomp />
+      <Imagecomp />
     </View>
   );
 };
