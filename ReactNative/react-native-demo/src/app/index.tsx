@@ -19,6 +19,7 @@ import Externalstyle from "../components/Externalstyle";
 import NameComp from "../components/NameComponent";
 import Xhandlecomp from "../components/Xhandlecomp";
 import Imagecomp from "../components/Imagecomp";
+import ListData from "../components/listcomp";
 
 const Hello = () => {
   return (
@@ -43,6 +44,7 @@ const Hello = () => {
       <Viewcomponet />
       <NameComp />
       <Xhandlecomp />
+      <ListData />
       <Imagecomp />
     </View>
   );
