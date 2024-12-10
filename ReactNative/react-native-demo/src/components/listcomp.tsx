@@ -7,6 +7,9 @@ const ListData = () => {
     <View>
       <FlatList
         data={fruits}
+        //we are a dding a key to each item so we can identify them
+        keyExtractor={(item) => item}
+        // we destructure the item in the object
         renderItem={({ item }) => {
           return <Text>{item}</Text>;
         }}

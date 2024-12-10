@@ -20,6 +20,7 @@ import NameComp from "../components/NameComponent";
 import Xhandlecomp from "../components/Xhandlecomp";
 import Imagecomp from "../components/Imagecomp";
 import ListData from "../components/listcomp";
+import ArrayofObject from "../components/ArrayofObject";
 
 const Hello = () => {
   return (
@@ -31,7 +32,6 @@ const Hello = () => {
       <Social />
       <Subjectname />
       <Textcom />
-      
       <Buttoncomp /> 
       <Imagescomp />
       <Profilecomp />
@@ -39,13 +39,14 @@ const Hello = () => {
       <DynamicContent2 />
       <Inlinestyling />
       <Interalstyling />
-      <Externalstyle />*/}
-
-      <Viewcomponet />
+      <Externalstyle />
+       <Viewcomponet />
       <NameComp />
       <Xhandlecomp />
       <ListData />
-      <Imagecomp />
+      <Imagecomp />*/}
+
+      <ArrayofObject />
     </View>
   );
 };
